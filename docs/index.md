@@ -1,5 +1,7 @@
 # AI Engineer Bootcamp - Curriculum Index
 
+![AI Engineer Bootcamp](logo.png)
+
 Welcome to the AI Engineer Bootcamp! This repository contains a comprehensive, day-by-day blog series guiding you from Python fundamentals to state-of-the-art Deep Learning and Transformer architectures.
 
 Below is the complete index of all the micro-tutorials generated for the curriculum so far.

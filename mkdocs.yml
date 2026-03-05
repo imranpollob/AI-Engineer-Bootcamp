@@ -1,8 +1,15 @@
 site_name: AI Engineer Bootcamp
+repo_url: https://github.com/imranpollob/AI-Engineer-Bootcamp
+repo_name: AI-Engineer-Bootcamp
+edit_uri: edit/main/docs/
 theme:
       name: material
+      logo: logo.png
+      favicon: logo.png
       features:
             - navigation.footer
+            - content.action.edit
+            - content.code.copy
       font:
             text: Roboto
             code: Roboto Mono
