@@ -31,12 +31,23 @@ B = np.array([[9, 8], [7, 6]])
 
 # Adds 1+9, 2+8, etc...
 print("Addition\n", A + B)
+# Output:
+# Addition
+#  [[10 10]
+#  [10 10]]
 
 # Multiplies every number in A by 3
 print("Scalar Mult: \n", 3 * A)
+# Output:
+# Scalar Mult: 
+#  [[ 3  6]
+#  [ 9 12]]
 ```
 
 ### Matrix Multiplication (The Dot Product)
+
+![Matrix Multiplication Diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Matrix_multiplication_qtl1.svg/1280px-Matrix_multiplication_qtl1.svg.png)
+
 Matrix multiplication isn't as simple as element-wise multiplication. It is the complex product of rows and columns (called the Dot Product). In neural networks, computing the dot product between your input data and the network's "weights" is the core calculation.
 
 We do this using NumPy's `np.dot()` function.
@@ -73,12 +84,31 @@ import numpy as np
 
 # Creates a 3x3 Identity Matrix (1s on the diagonal, 0s everywhere else)
 I = np.eye(3)
+print("Identity Matrix:\n", I)
+# Output:
+# Identity Matrix:
+#  [[1. 0. 0.]
+#  [0. 1. 0.]
+#  [0. 0. 1.]]
 
 # Any matrix A multiplied by I remains exactly A.
 # A = np.dot(A, I)
 
 D = np.diag([1, 7, 9]) # Creates a diagonal matrix
+print("Diagonal Matrix:\n", D)
+# Output:
+# Diagonal Matrix:
+#  [[1 0 0]
+#  [0 7 0]
+#  [0 0 9]]
+
 Z = np.zeros((3, 3))   # Creates a 3x3 Zero matrix
+print("Zero Matrix:\n", Z)
+# Output:
+# Zero Matrix:
+#  [[0. 0. 0.]
+#  [0. 0. 0.]
+#  [0. 0. 0.]]
 ```
 
 ## Wrapping Up Day 1
