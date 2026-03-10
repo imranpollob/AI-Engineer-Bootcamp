@@ -52,6 +52,10 @@ else:
 # Output: Fail to Reject! P=0.31
 # There is a massive 31% chance our students' "higher" score was just luck. 
 # We cannot statistically claim they are smarter!
+# Output:
+# T-Statistic:  0.9408750722807707
+# P-Value:  0.383088241586687
+# Fail to Reject the null hypothesis: no significant difference
 ```
 
 ## Two-Sample T-Test
@@ -77,6 +81,8 @@ else:
 
 # Output: Fail to Reject! P=0.55
 # With a P-Value of 55%, the difference between these two groups is entirely negligible.
+# Output:
+# Fail to Reject the null hypothesis: no significant difference
 ```
 
 ## Type I and Type II Errors

@@ -35,6 +35,10 @@ for param in model.parameters():
 # ResNet50 natively outputs 1,000 classes. We only want 10 classes!
 num_features = model.fc.in_features
 model.fc = torch.nn.Linear(num_features, 10)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'torchvision'
 ```
 
 Look at how elegant this is. We downloaded a 50-layer behemoth `ResNet50`. We mathematically disabled its ability to learn using `param.requires_grad = False` (or `layer.trainable = False` in TensorFlow). 

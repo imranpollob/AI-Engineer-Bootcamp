@@ -60,6 +60,10 @@ trainer = Trainer(
 trainer.train()
 
 # Output Results: Test Accuracy > ~94%!
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'datasets'
 ```
 
 ## Wrapping Up Day 6

@@ -63,6 +63,10 @@ for epoch in range(5):
         
         # 4. GRADIENT DESCENT! (Fix the weights!)
         optimizer.step()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'nn' is not defined
 ```
 
 ## Wrapping Up Day 6

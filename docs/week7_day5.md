@@ -39,6 +39,10 @@ cat_model_native.fit(X_train, y_train)
 # Predict!
 cat_preds_native = cat_model_native.predict(X_test)
 print(f"CatBoost Native Accuracy: {accuracy_score(y_test, cat_preds_native):.4f}")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'catboost'
 ```
 
 ## When to use Which?

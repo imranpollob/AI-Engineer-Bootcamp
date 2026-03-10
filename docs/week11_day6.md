@@ -32,6 +32,10 @@ class Encoder(nn.Module):
         # We extract ONLY the final Context (Hidden) state!
         outputs, (hidden, cell) = self.lstm(embedded)
         return hidden, cell
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'nn' is not defined
 ```
 
 ### The Decoder Unzipping
@@ -47,6 +51,10 @@ It must predict 1 word. Then it takes its own prediction and feeds it *back into
         for t in range(1, tgt_len):
             # The Decoder returns a French Word, AND an updated Hidden State!
             output, hidden, cell = self.decoder(input, hidden, cell)
+# Output:
+# File "<string>", line 2
+#     hidden, cell = self.encoder(src)
+# IndentationError: unexpected indent
 ```
 
 ## Wrapping Up Day 6

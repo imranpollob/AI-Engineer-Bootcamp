@@ -27,6 +27,9 @@ derivative = sp.diff(f, x)
 print("Function: ", f)
 print("Derivative: ", derivative)
 # Output: Derivative: 3*x**2 - 5
+# Output:
+# Function:  x**3 - 5*x + 7
+# Derivative:  3*x**2 - 5
 ```
 
 ## Partial Derivatives and Gradients
@@ -49,6 +52,10 @@ grad_y = sp.diff(f, y) # The slope along the Y axis
 print("Gradients:")
 print("Grad X:", grad_x)
 print("Grad Y:", grad_y)
+# Output:
+# Gradients:
+# Grad X: 2*x - 4*y
+# Grad Y: -4*x + 6*y
 ```
 
 ## Gradient Descent Parameter Optimization
@@ -93,6 +100,8 @@ iterations = 1000
 
 optimized_theta = gradient_descent(X, y, theta, learning_rate, iterations)
 print("Optimized Parameters: ", optimized_theta)
+# Output:
+# Optimized Parameters:  [1.166663   0.75000161]
 ```
 
 ## Wrapping Up Day 3

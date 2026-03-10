@@ -38,6 +38,10 @@ model = Sequential([
 ])
 
 model.summary()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 When you print `model.summary()`, look closely at the **Output Shape**. 
@@ -66,6 +70,10 @@ model.fit(
     batch_size=64,
     validation_split=0.2
 )
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'model' is not defined
 ```
 
 ## Wrapping Up Day 4

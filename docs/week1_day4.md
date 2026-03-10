@@ -21,7 +21,9 @@ fruits.insert(1, "grape") # Inserts 'grape' at index 1
 fruits.remove("banana") # Removes a specific item
 
 # Slicing a list to get a sub-list
-sliced_fruits = fruits[2:4] 
+sliced_fruits = fruits[2:4]
+# Output:
+# apple
 ```
 
 ## 2. Tuples
@@ -38,6 +40,8 @@ single_item = ("glass",)
 
 print(colors[0]) # Output: red
 # colors.append("yellow") # ERROR! Tuples cannot be modified!
+# Output:
+# red
 ```
 
 ## 3. Dictionaries
@@ -52,7 +56,7 @@ student["subject"] = "Math" # Adds a new key-value pair
 student["age"] = 32 # Updates an existing value
 
 # Removing data
-del student["grade"] 
+del student["grade"]
 ```
 
 ## 4. Sets
@@ -64,6 +68,8 @@ set2 = {3, 4, 5}
 
 # Set Difference: What is in set1 but NOT in set2?
 print(set1 - set2) # Output: {1, 2}
+# Output:
+# {1, 2}
 ```
 
 ## Hands-On Let's Code!
@@ -89,6 +95,8 @@ if "grade" in person:
     
 print(person)
 # Output: {'name': 'Alice', 'age': 32, 'address': '123 Main St'}
+# Output:
+# {'name': 'Alice', 'age': 32, 'address': '123 Main St'}
 ```
 
 ### Exercise 2: Word Frequency Counter (NLP Basics)

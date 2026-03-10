@@ -39,6 +39,10 @@ output = Dense(5, activation="softmax")(x)  # Output exactly 5 Custom Classes!
 model = Model(inputs=base_model.input, outputs=output)
 
 model.compile(optimizer='adam', loss="categorical_crossentropy", metrics=['accuracy'])
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 ### Training the Pipeline

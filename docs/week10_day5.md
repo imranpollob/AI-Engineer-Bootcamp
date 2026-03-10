@@ -58,6 +58,10 @@ In PyTorch, you physically apply the activation functions to the layers natively
         x = torch.relu(self.fc2(x))
         x = self.fc3(x)
         return x
+# Output:
+# File "<string>", line 1
+#     def forward(self, x):
+# IndentationError: unexpected indent
 ```
 
 ## Wrapping Up Day 5

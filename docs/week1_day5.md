@@ -53,6 +53,9 @@ print(digits) # Output: ['123', '456', '7890']
 # Replace all single digits with the letter 'X' (Redaction!)
 updated_text = re.sub(r"\d", "X", text)
 print(updated_text) # Output: Contact me at XXX-XXX-XXXX
+# Output:
+# ['123', '456', '7890']
+# Contact me at XXX-XXX-XXXX
 ```
 
 ## Hands-On Let's Code!
@@ -81,6 +84,8 @@ input_text = "   Hello, World.!!! Welcome to Python, Programming....    "
 cleaned_text = clean_text(input_text)
 print("Cleaned Text: ", cleaned_text)
 # Output: Cleaned Text:  hello world welcome to python programming
+# Output:
+# Cleaned Text:  hello world welcome to python programming
 ```
 
 ### Exercise 2: The Palindrome Checker

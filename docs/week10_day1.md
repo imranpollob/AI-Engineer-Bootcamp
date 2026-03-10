@@ -44,6 +44,10 @@ class SimpleCNN(nn.Module):
         self.conv1 = nn.Conv2d(3, 32, kernel_size=3, activation='relu')
         # The Downsizing Layer!
         self.pool = nn.MaxPool2d(2, 2)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 ## Wrapping Up Day 1

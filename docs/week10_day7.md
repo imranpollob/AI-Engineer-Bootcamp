@@ -20,6 +20,10 @@ transform_train = transforms.Compose([
 ])
 
 # NOTE: We DO NOT Mutate the Test Set! It must remain pure and untainted!
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'transforms' is not defined
 ```
 
 ### Phase 2: Dynamic Architecture
@@ -48,6 +52,10 @@ class EnhancedCNN(nn.Module):
         
         # We save the exact physical integer size of the crushed matrix output!
         self.conv_output_size = output.numel()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'nn' is not defined
 ```
 
 By dynamically passing a `dummy_input` tensor of dimensions $(32 \times 32)$ through the sequence, we force PyTorch to physically simulate the dimensionality loss! It passes the crushed size dynamically into `self.fc1`, meaning you never have to do mental math again!

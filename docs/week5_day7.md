@@ -36,6 +36,10 @@ X = scaler.fit_transform(X)
 
 # 3. SPLIT THE DATA
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# FileNotFoundError: [Errno 2] No such file or directory: 'Telco-Customer-Churn.csv'
 ```
 
 ## Task 2: The Showdown
@@ -53,6 +57,10 @@ knn_model.fit(X_train, y_train)
 # Have them both take the final exam
 log_pred = log_model.predict(X_test)
 knn_pred = knn_model.predict(X_test)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'LogisticRegression' is not defined
 ```
 
 ## Task 3: Evaluating the Winner
@@ -64,6 +72,11 @@ print(classification_report(y_test, log_pred))
 
 print("\nk-NN Classification Report:")
 print(classification_report(y_test, knn_pred))
+# Output:
+# Logistic Regression Classification Report:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'classification_report' is not defined
 ```
 *Depending on the specifics of the data, one model will usually outperform the other in Recall or F1-Score!*
 

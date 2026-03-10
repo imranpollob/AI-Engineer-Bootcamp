@@ -43,6 +43,10 @@ lasso_model = Lasso(alpha=0.1)
 lasso_model.fit(X_train, y_train)
 print(f"Lasso Regression MSE: {mean_squared_error(y_test, lasso_model.predict(X_test)):.4f}")
 print("Coefficients:", lasso_model.coef_)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X_train' is not defined
 ```
 
 When you print the `coef_` inside Lasso, you will notice that massive chunks of the array are literally `0.000`! It completely ignored half the dataset during training!

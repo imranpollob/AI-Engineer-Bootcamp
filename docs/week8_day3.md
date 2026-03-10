@@ -43,6 +43,10 @@ study.optimize(objective, n_trials=50)
 
 print("Best Hyperparameters:", study.best_params)
 print("Best Accuracy: ", study.best_value)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'xgboost'
 ```
 
 ## Explorations vs. Exploitation

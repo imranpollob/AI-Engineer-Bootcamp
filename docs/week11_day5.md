@@ -43,6 +43,10 @@ model = Sequential([
     
     Dense(1, activation='sigmoid')
 ])
+# Output:
+# Traceback (most recent call last):
+#   ...
+# FileNotFoundError: [Errno 2] No such file or directory: 'glove.6B.100d.txt'
 ```
 
 By adding `trainable=False`, we freeze the weights! This is exactly what **Transfer Learning** is. We take Stanford's 6 billion word NLP expertise and hot-swap it directly into our 10,000 word Movie Review Classifier! 

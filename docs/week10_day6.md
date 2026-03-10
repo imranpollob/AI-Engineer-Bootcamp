@@ -26,6 +26,10 @@ datagen = ImageDataGenerator(
 
 # 2. Pre-calculate the statistical limits of our specific training set!
 datagen.fit(x_train)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 ## The Infinite Batch

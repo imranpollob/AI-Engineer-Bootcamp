@@ -46,6 +46,10 @@ model.compile(optimizer="adam", loss="binary_crossentropy", metrics=['accuracy']
 
 # 6. TRAIN! 
 history = model.fit(train_data, validation_data=val_data, epochs=10)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 ## The Next Step: Unfreezing Extensibility

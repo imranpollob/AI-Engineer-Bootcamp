@@ -35,13 +35,6 @@ print("Addition\n", A + B)
 # Addition
 #  [[10 10]
 #  [10 10]]
-
-# Multiplies every number in A by 3
-print("Scalar Mult: \n", 3 * A)
-# Output:
-# Scalar Mult: 
-#  [[ 3  6]
-#  [ 9 12]]
 ```
 
 ### Matrix Multiplication (The Dot Product)
@@ -68,6 +61,9 @@ v = np.array([1, 0, -1])
 result = np.dot(M, v)
 print("Matrix-Vector Multiplication: \n", result)
 # Output: [-2 -2 -2]
+# Output:
+# Matrix-Vector Multiplication: 
+#  [-2 -2 -2]
 ```
 *(Notice how multiplying a 3x3 Matrix by a 3-element vector results in a new 3-element vector? This dimensionality shift is exactly how AI layers change the shape of data!)*
 
@@ -90,25 +86,6 @@ print("Identity Matrix:\n", I)
 #  [[1. 0. 0.]
 #  [0. 1. 0.]
 #  [0. 0. 1.]]
-
-# Any matrix A multiplied by I remains exactly A.
-# A = np.dot(A, I)
-
-D = np.diag([1, 7, 9]) # Creates a diagonal matrix
-print("Diagonal Matrix:\n", D)
-# Output:
-# Diagonal Matrix:
-#  [[1 0 0]
-#  [0 7 0]
-#  [0 0 9]]
-
-Z = np.zeros((3, 3))   # Creates a 3x3 Zero matrix
-print("Zero Matrix:\n", Z)
-# Output:
-# Zero Matrix:
-#  [[0. 0. 0.]
-#  [0. 0. 0.]
-#  [0. 0. 0.]]
 ```
 
 ## Wrapping Up Day 1

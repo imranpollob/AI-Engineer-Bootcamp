@@ -26,6 +26,10 @@ df['month'] = df['dteday'].dt.month            # 1 - 12
 df['year'] = df['dteday'].dt.year              # 2011, 2012
 
 # (Now we can One-Hot Encode 'day_of_week' and predict bicycle rentals perfectly!)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# FileNotFoundError: [Errno 2] No such file or directory: 'bike_sharing_daily.csv'
 ```
 
 ## 2. Feature Transformation (Polynomials)
@@ -61,6 +65,10 @@ print(f"MSE Polynomial: {mean_squared_error(y_test, model_poly.predict(X_poly_te
 
 # The Polynomial MSE will be significantly lower, because it allowed the 
 # model to finally understand the non-linear curvature of summer heat!
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 ## Other Transformations

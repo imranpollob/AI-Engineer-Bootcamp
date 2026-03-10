@@ -25,6 +25,10 @@ import seaborn as sns
 # Plotting the perfect Gaussian Distribution
 x = np.linspace(-4, 4, 100)
 plt.plot(x, norm.pdf(x, loc=0, scale=1), label="Gaussian (u=0, s=1)")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'seaborn'
 ```
 
 ### 2. Binomial Distribution
@@ -37,6 +41,10 @@ n, p = 10, 0.5
 x = np.arange(0, n+1)
 # Plotting the Binomial (Notice we use a Bar chart because it is Discrete!)
 plt.bar(x, binom.pmf(x, n, p), alpha=0.7, label="Binomial (n=10, p=0.5)")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'np' is not defined. Did you mean: 'n'?
 ```
 
 ### 3. Poisson Distribution
@@ -49,6 +57,10 @@ Often used in time-series forecasting algorithms.
 lam = 3
 x = np.arange(0,10)
 plt.bar(x, poisson.pmf(x, lam), alpha=0.7, label="Poisson (l = 3)")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'np' is not defined
 ```
 
 ### 4. Uniform Distribution
@@ -60,6 +72,10 @@ Continuous distribution where every single outcome in a range $[a, b]$ has an id
 x = np.random.uniform(low=0, high=10, size=1000)
 sns.histplot(x, kde=True, label="Uniform", color="red")
 plt.show()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'np' is not defined
 ```
 
 ## Understanding Distribution Shape (Skewness & Kurtosis)
@@ -90,6 +106,10 @@ print("Kurtosis: ", kurtosis(feature))
 sns.histplot(feature, kde=True)
 plt.title("Distribution of Sepal Length")
 plt.show()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'seaborn'
 ```
 
 ## Wrapping Up Day 2

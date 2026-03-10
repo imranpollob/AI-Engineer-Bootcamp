@@ -53,6 +53,10 @@ print("Slope : ", model.coef_[0][0])
 print("Intercept : ", model.intercept_[0])
 # Output: Slope: ~3.00, Intercept: ~0.16. 
 # The model successfully figured out the hidden multiplier in our synthetic data!
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'model' is not defined
 ```
 
 To scientifically prove our model is good, we compare its `y_pred` guesses against the actual `y_test` hidden answers.
@@ -64,6 +68,10 @@ r2 = r2_score(y_test, y_pred)
 
 print("MSE: ", mse) # Output: ~3.67
 print("R-Squared: ", r2) # Output: ~0.999!
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'mean_squared_error' is not defined
 ```
 An $R^2$ of `0.999` tells us our model successfully mapped 99.9% of the mathematical variance in our testing set!
 

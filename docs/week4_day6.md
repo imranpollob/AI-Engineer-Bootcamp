@@ -30,6 +30,10 @@ correlation_matrix = df.corr()
 sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm")
 plt.title("Feature Correlations")
 plt.show()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'seaborn'
 ```
 *If two different input features (like `petal_length` and `petal_width`) have a 0.96 correlation, it means they contain almost the exact same information. You should probably delete one before training an AI!*
 

@@ -80,6 +80,12 @@ print("Optimized Parameters (Theta): \n", theta_optimized)
 print("MSE: ", mse)
 print("R2: ", r2) 
 # An R2 close to 1.0 means our model perfectly predicts the data!
+# Output:
+# Optimized Parameters (Theta): 
+#  [[4.21509609]
+#  [2.77011344]]
+# MSE:  0.8065845639670546
+# R2:  0.769273541361422
 ```
 
 ## Wrapping Up Week 3!

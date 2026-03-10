@@ -39,6 +39,10 @@ attention_weights = F.softmax(scores, dim=-1)
 context = torch.matmul(attention_weights, values)
 
 print("Attention Weights:\n", attention_weights)
+# Output:
+# Attention Weights:
+#  tensor([[0.5761, 0.2119, 0.2119],
+#         [0.2119, 0.2119, 0.5761]])
 ```
 
 ### The Magic of the Dot Product

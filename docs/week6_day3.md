@@ -48,6 +48,15 @@ df['Pclass_encoded'] = label_encoder.fit_transform(df['Pclass'])
 # our dataset will explode to 800 columns. 
 # Instead, we replace the Ticket String with the Frequency of how often it appeared!
 df['Ticket_frequency'] = df['Ticket'].map(df['Ticket'].value_counts())
+# Output:
+# PassengerId  Survived  Pclass  ... Sex_male  Embarked_Q  Embarked_S
+# 0            1         0       3  ...     True       False        True
+# 1            2         1       1  ...    False       False       False
+# 2            3         1       3  ...    False       False        True
+# 3            4         1       1  ...    False       False        True
+# 4            5         0       3  ...     True       False        True
+# 
+# [5 rows x 13 columns]
 ```
 
 Once all text is banished from the DataFrame, we drop the useless columns (like `Name`), leaving only numbers. The data is finally ready for `model.fit()`!

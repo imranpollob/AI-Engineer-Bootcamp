@@ -37,6 +37,10 @@ plt.show()
 
 # Print the full statistical breakdown!
 print("Classification Report:\n", classification_report(y_test, y_pred))
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'model' is not defined
 ```
 
 ## Cross-Validation (K-Fold)
@@ -66,6 +70,9 @@ cv_scores = cross_val_score(model, X, y, cv=kf, scoring="accuracy")
 
 print("Cross-Validation Scores:", cv_scores)
 print("Mean Accuracy:", cv_scores.mean())
+# Output:
+# Cross-Validation Scores: [1.         0.96666667 0.93333333 0.93333333 0.96666667]
+# Mean Accuracy: 0.9600000000000002
 ```
 
 ## Wrapping Up Day 5

@@ -45,6 +45,10 @@ df = df.drop_duplicates()
 # Let's slice the dataframe to only look at 1st Class!
 first_class = df[df["Pclass"] == 1]
 print("First Class Passengers: \n", first_class.head())
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'seaborn'
 ```
 
 ## Visualizing the Findings
@@ -60,6 +64,10 @@ survival_by_class.plot(kind="bar", color="skyblue")
 plt.title("Survival Rate by class")
 plt.ylabel("Survival Rate")
 plt.show()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 **Hypothesis 2:** Was the Titanic full of young people or old people?
@@ -70,6 +78,10 @@ plt.title("Age Distribution")
 plt.xlabel("Age")
 plt.ylabel("Frequency")
 plt.show()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'sns' is not defined
 ```
 
 **Hypothesis 3:** Did older people buy more expensive tickets? 
@@ -80,6 +92,10 @@ plt.title("Age vs Fare")
 plt.xlabel("Age")
 plt.ylabel("Fare")
 plt.show()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'plt' is not defined
 ```
 
 ## Wrapping Up Week 2!

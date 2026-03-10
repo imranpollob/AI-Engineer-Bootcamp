@@ -41,6 +41,10 @@ skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 scores_stratified = cross_val_score(rf_model, X_train, y_train, cv=skf, scoring='accuracy')
 
 print(f"Stratified Mean Accuracy: {scores_stratified.mean():.2f}")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X_train' is not defined
 ```
 
 While the Average accuracy might look mathematically identical ($0.99$), the real power of Stratification is in the Variance! 

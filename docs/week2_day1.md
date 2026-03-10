@@ -21,6 +21,10 @@ print(arr[-1]) # Output: 60
 
 # Slicing works the same way too
 print(arr[1:4]) # Output: [20 30 40]
+# Output:
+# 30
+# 60
+# [20 30 40]
 ```
 
 ## Reshaping Data
@@ -31,8 +35,9 @@ In AI, we constantly change the shape of our data. For instance, you might have 
 reshaped = arr.reshape(2, 3)
 print(reshaped)
 # Output:
-# [[10 20 30]
-#  [40 50 60]]
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'arr' is not defined
 ```
 
 ## Hands-On Let's Code!
@@ -54,6 +59,11 @@ print("Add: ", a + b)   # Output: [ 7  9 11 13 15]
 print("Sub: ", a - b)   # Output: [-5 -5 -5 -5 -5]
 print("Mult: ", a * b)  # Output: [ 6 14 24 36 50]
 print("Div: ", a / b)
+# Output:
+# Add:  [ 7  9 11 13 15]
+# Sub:  [-5 -5 -5 -5 -5]
+# Mult:  [ 6 14 24 36 50]
+# Div:  [0.16666667 0.28571429 0.375      0.44444444 0.5       ]
 ```
 
 ### Exercise 2: Matrix Manipulations
@@ -76,6 +86,19 @@ another_matrix = np.array([[9,8,7], [6,5,4], [3,2,1]])
 
 print("Addition: \n", matrix + another_matrix)
 print("Multiplication : \n", matrix * another_matrix)
+# Output:
+# Transpose:
+#  [[1 4 7]
+#  [2 5 8]
+#  [3 6 9]]
+# Addition: 
+#  [[10 10 10]
+#  [10 10 10]
+#  [10 10 10]]
+# Multiplication : 
+#  [[ 9 16 21]
+#  [24 25 24]
+#  [21 16  9]]
 ```
 
 ## Wrapping Up Day 1

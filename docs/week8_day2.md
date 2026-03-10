@@ -23,6 +23,10 @@ grid_search = GridSearchCV(
     cv=5, n_jobs=-1
 )
 grid_search.fit(X_train, y_train)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'RandomForestClassifier' is not defined
 ```
 *   **Pros:** It is guaranteed to find the absolute best combination inside your dictionary.
 *   **Cons:** If your dictionary has 1,000 combinations, Grid Search might take 3 days to finish running!
@@ -51,6 +55,10 @@ random_search = RandomizedSearchCV(
     cv=5, n_jobs=-1
 )
 random_search.fit(X_train, y_train)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'RandomForestClassifier' is not defined
 ```
 
 ## The Showdown

@@ -37,17 +37,28 @@ print("Categorical Features: ", categorical_features.tolist())
 
 print("Numerical Features: ", numerical_features.tolist())
 # Output: ['PassengerId', 'Survived', 'Pclass', 'Age', 'SibSp', 'Parch', 'Fare']
+# Output:
+# Categorical Features:  ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
+# Numerical Features:  ['PassengerId', 'Survived', 'Pclass', 'Age', 'SibSp', 'Parch', 'Fare']
 ```
 
 Once we have separated them, we can analyze them individually. We can look at the mathematical averages of the Numerical features:
 ```python
 print(df[numerical_features].describe())
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 And we can count the frequency of the Text features:
 ```python
 for col in categorical_features:
     print(f"{col}:\n", df[col].value_counts(), "\n")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'categorical_features' is not defined
 ```
 
 ## Wrapping Up Day 1

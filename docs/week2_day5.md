@@ -20,6 +20,10 @@ grouped = df.groupby("column_name")
 for name, group in grouped:
     print(name)
     print(group)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 ## Aggregation Functions
@@ -48,11 +52,14 @@ print("Original Dataset \n", df)
 grouped = df.groupby("Class").mean()
 # print(grouped)
 # Output:
-#        Score   Age
-# Class             
-# A       86.5  15.0
-# B       81.0  16.5
-# C       87.5  15.5
+# Original Dataset 
+#    Class  Score  Age
+# 0     A     85   15
+# 1     B     90   16
+# 2     A     88   15
+# 3     B     72   17
+# 4     C     95   16
+# 5     C     80   15
 ```
 As you can see, Pandas instantly aggregates every single student in Class A, Class B, and Class C and calculates their average Age and test Score!
 
@@ -68,6 +75,10 @@ stats = df.groupby("Class").agg({
 })
 
 print(stats)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 ## Pivot Tables & Custom Aggregations
@@ -78,6 +89,10 @@ pivot = df.pivot_table(
     index="category_column",
     aggfunc="mean"
 )
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 Want to run a mathematical function that isn't built into Pandas? Just write a standard Python function and pass it directly to `.agg()`!
@@ -88,6 +103,10 @@ def range_func(x):
     return x.max() - x.min()
 
 df.groupby("category_column")["numeric_column"].agg(range_func)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 ## Wrapping Up Day 5

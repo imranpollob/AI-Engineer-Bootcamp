@@ -32,6 +32,8 @@ Sometimes you need a tiny, single-use function, but you don't want to define a w
 # A lambda function that adds 10 to a number
 add_ten = lambda x: x + 10
 print(add_ten(5)) # Output: 15
+# Output:
+# 15
 ```
 
 ### Feature 3: The `sys` and `os` Modules

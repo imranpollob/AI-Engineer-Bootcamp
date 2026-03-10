@@ -49,6 +49,10 @@ roc_auc_lgb = roc_auc_score(y_test, lgb_model.predict_proba(X_test)[:, 1])
 print(f"Random Forest ROC-AUC: {roc_auc_rf:.2f}")
 print(f"XGBoost ROC-AUC: {roc_auc_xgb:.2f}")
 print(f"LightGBM ROC-AUC: {roc_auc_lgb:.2f}")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'imblearn'
 ```
 
 *(Note: While algorithms will naturally trade blows natively, CatBoost / LightGBM almost always win out of the box until heavy GridSearchCV tuning is applied).*

@@ -49,6 +49,10 @@ random_search.fit(X_train, y_train)
 # 4. View results!
 print(f"Best Parameters: {random_search.best_params_}")
 print(f"Test Accuracy: {random_search.best_score_:.4f}")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X_train' is not defined
 ```
 
 ## Wrapping Up Day 6

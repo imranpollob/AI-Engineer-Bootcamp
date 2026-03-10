@@ -37,6 +37,10 @@ blur_kernel = np.array([
 
 # When you apply these kernels to an image, the raw math literally redilutes the pixels!
 edge_detected_image = convolve(image, edge_detection_kernel)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'image' is not defined
 ```
 
 ## The Goal of Deep Learning

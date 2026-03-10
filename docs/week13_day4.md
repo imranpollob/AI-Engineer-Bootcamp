@@ -48,6 +48,10 @@ trainer = Trainer(
 )
 
 trainer.train()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'datasets'
 ```
 
 ### The NLP Tokenizer

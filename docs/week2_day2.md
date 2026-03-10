@@ -29,6 +29,15 @@ result_mul = matrix * 2
 
 print("Add: \n", result_add)
 print("Multiplication: \n", result_mul)
+# Output:
+# Add: 
+#  [[2 2 2]
+#  [5 5 5]
+#  [8 8 8]]
+# Multiplication: 
+#  [[ 2  4  6]
+#  [ 8 10 12]
+#  [14 16 18]]
 ```
 
 ## Boolean Indexing: Lightning-Fast Filtering
@@ -43,6 +52,13 @@ import numpy as np
 # np.random generates random numbers fast.
 dataset = np.random.randint(1, 51, size=(5,5))
 print("Original Dataset: \n", dataset)
+# Output:
+# Original Dataset: 
+#  [[26 34 11  8 46]
+#  [ 2 40 30 44 27]
+#  [11 41  2 25  1]
+#  [34 24 34 33 49]
+#  [47  3 10 20 41]]
 ```
 
 Now, instead of a slow `for... if` loop, what if we wanted to replace any number greater than 25 with a 0? We generate a boolean condition (`dataset > 25`) and use it directly as an index!
@@ -51,6 +67,10 @@ Now, instead of a slow `for... if` loop, what if we wanted to replace any number
 # Boolean Indexing is incredibly fast
 dataset[dataset > 25] = 0
 print("Modified Dataset: \n", dataset)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'dataset' is not defined
 ```
 
 ## Aggregation Functions
@@ -61,6 +81,10 @@ When working with data, you frequently need to calculate summary statistics for 
 print("Sum: ", np.sum(dataset))
 print("Mean: ", np.mean(dataset))
 print("Standard Deviation: ", np.std(dataset))
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'np' is not defined
 ```
 
 ## Hands-On Let's Code!
@@ -70,6 +94,10 @@ Try taking `day2_ex2.py` one step further. Can you modify the boolean index to o
 ```python
 # Example: Find all values greater than 10 AND less than 20
 between_10_and_20 = dataset[(dataset > 10) & (dataset < 20)]
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'dataset' is not defined
 ```
 
 ## Wrapping Up Day 2

@@ -36,6 +36,10 @@ tf_layer = tf.keras.layers.Dense(units=10, activation='relu')
 
 # 3. Define a layer of 5 Artificial Neurons using Meta's PyTorch
 torch_layer = nn.Linear(in_features=10, out_features=5)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 ## Wrapping Up Day 1

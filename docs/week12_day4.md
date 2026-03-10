@@ -65,6 +65,10 @@ class TransformerWithPositionalEncoding(nn.Module):
         x = self.norm2(x + ffn_output)
         
         return x
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'nn' is not defined
 ```
 
 ## Wrapping Up Day 4

@@ -25,7 +25,7 @@ df = pd.DataFrame(data)
 # Print the resulting table!
 print(df)
 # Output:
-#     Name  Age
+# Name  Age
 # 0  Alice   25
 # 1    Bob   30
 ```
@@ -70,6 +70,23 @@ print(df.describe())
 # We can select specific columns by passing a list of column names
 selected_columns = df[["species", "sepal_length"]]
 print("Selected Columns: \n", selected_columns.head())
+# Output:
+# sepal_length  sepal_width  petal_length  petal_width
+# count    150.000000   150.000000    150.000000   150.000000
+# mean       5.843333     3.057333      3.758000     1.199333
+# std        0.828066     0.435866      1.765298     0.762238
+# min        4.300000     2.000000      1.000000     0.100000
+# 25%        5.100000     2.800000      1.600000     0.300000
+# 50%        5.800000     3.000000      4.350000     1.300000
+# 75%        6.400000     3.300000      5.100000     1.800000
+# max        7.900000     4.400000      6.900000     2.500000
+# Selected Columns: 
+#    species  sepal_length
+# 0  setosa           5.1
+# 1  setosa           4.9
+# 2  setosa           4.7
+# 3  setosa           4.6
+# 4  setosa           5.0
 ```
 
 ### Filtering Data with Conditionals
@@ -80,6 +97,10 @@ Just like we did with NumPy boolean masking yesterday, Pandas allows us to insta
 filtered_rows = df[(df["sepal_length"] > 5.0) & (df["species"] == "setosa")]
 
 print("Filtered Rows: \n", filtered_rows)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 Finally, if you need to access specific rows by their numerical index, you use `.iloc` (Index Location):
@@ -88,7 +109,11 @@ Finally, if you need to access specific rows by their numerical index, you use `
 print(df.iloc[0]) 
 
 # Prints all rows (:), but only the first column
-print(df.iloc[:, 0]) 
+print(df.iloc[:, 0])
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 ## Wrapping Up Day 3

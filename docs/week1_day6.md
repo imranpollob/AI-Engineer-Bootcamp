@@ -18,6 +18,10 @@ Normally, you would do this:
 file = open("data.txt", "r")
 content = file.read()
 file.close() # DO NOT FORGET THIS
+# Output:
+# Traceback (most recent call last):
+#   ...
+# FileNotFoundError: [Errno 2] No such file or directory: 'data.txt'
 ```
 If your program crashes before `file.close()` runs, that file might be corrupted or locked indefinitely.
 
@@ -33,6 +37,8 @@ try:
 # We also use a try/except block just in case the file doesn't exist!
 except FileNotFoundError:
     print("File Not Found!")
+# Output:
+# File Not Found!
 ```
 
 ## Hands-On Let's Code!
@@ -61,6 +67,8 @@ def count_words_and_lines(filename):
         print(f"File {filename} not found!")
         
 count_words_and_lines("sample.txt")
+# Output:
+# File sample.txt not found!
 ```
 
 ### Exercise 2: Writing and Reading a List
@@ -96,6 +104,12 @@ write_item_to_file("fruits.txt", fruits)
 
 # Read it back
 read_items_from_file("fruits.txt")
+# Output:
+# Items in the file:
+# Apple
+# Banana
+# Cherry
+# Dates
 ```
 
 ## Wrapping Up Day 6

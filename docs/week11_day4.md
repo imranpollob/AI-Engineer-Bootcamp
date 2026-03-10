@@ -41,6 +41,10 @@ gru_model = Sequential([
     GRU(128, activation='tanh', return_sequences=False),
     Dense(1, activation='sigmoid')
 ])
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 ## GRU vs LSTM

@@ -35,6 +35,8 @@ specificity = 0.90
 posterior = bayes_theorem(prior, sensitivity, specificity)
 print("Probability of Disease Given Positive Test: ", posterior)
 # Output: ~0.087 (Only an 8.7% chance you actually have it!)
+# Output:
+# Probability of Disease Given Positive Test:  0.08755760368663597
 ```
 *Why so low? Because the disease is so rare, and the 10% false-positive rate on the 99% healthy population creates massive noise! AI models use these exact calculations to avoid making disastrous mistakes.*
 

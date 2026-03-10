@@ -30,6 +30,10 @@ print(df.describe())
 sns.histplot(df["total_bill"], kde=True)
 plt.title("Distribution of Total Bill")
 plt.show() # Output reveals a positive skew! Most bills are $10-$20.
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'seaborn'
 ```
 
 ### 2. Hypothesis Testing
@@ -57,6 +61,10 @@ else:
 
 # Output: P-Value: 0.166. 
 # There is NO statistical difference in how men and women tip!
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 ### 3. Correlation and Regression
@@ -79,18 +87,10 @@ model.fit(X, y)
 print("Slope (Tip per Dollar): ", model.coef_[0])
 print("Intercept (Base Tip): ", model.intercept_)
 print("R-Squared:", model.score(X, y))
-
 # Output:
-# Slope: 0.105 (For every $1 the bill increases, the tip goes up ~10 cents!)
-# R-Squared: ~0.45 
-# (45% of the variance in the tip is explained purely by the bill size!)
-
-# Plot regression
-sns.scatterplot(x=df['total_bill'], y=df['tip'], color="blue")
-plt.plot(df['total_bill'], model.predict(X), color="red", label="Regression Line")
-plt.title("Total Bill vs Tip")
-plt.legend()
-plt.show()
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 ## Wrapping Up Week 4!

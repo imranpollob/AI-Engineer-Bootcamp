@@ -49,6 +49,10 @@ history = model.fit(
 )
 
 # Output: Epoch 10/10 - val_accuracy: 0.9850 (98.5% Accuracy!)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 ## Wrapping Up Day 5

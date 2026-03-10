@@ -67,6 +67,10 @@ lasso_predictions = lasso_model.predict(X_test)
 # Evaluate!
 print("Ridge Regression MSE:", mean_squared_error(y_test, ridge_predictions))
 print("Lasso Regression MSE:", mean_squared_error(y_test, lasso_predictions))
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X_train' is not defined
 ```
 
 ## Wrapping Up Day 3

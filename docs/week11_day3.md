@@ -34,6 +34,10 @@ lstm_model = Sequential([
     LSTM(128, activation='tanh'),
     Dense(1, activation='sigmoid')
 ])
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 By substituting `SimpleRNN` with `LSTM`, TensorFlow automatically implements the complex Forget and Input gate mathematics. 

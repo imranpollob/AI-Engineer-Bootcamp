@@ -15,6 +15,10 @@ Scikit-Learn supports this natively by adding `class_weight="balanced"` to almos
 ```python
 # The model will internally multiply the importance of Fraud errors to match Normal!
 rf_model = RandomForestClassifier(class_weight="balanced", random_state=42)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'RandomForestClassifier' is not defined
 ```
 
 ## Technique 2: SMOTE
@@ -45,12 +49,9 @@ X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
 # 3. Prove they are balanced!
 print(pd.Series(y_resampled).value_counts())
 # Output:
-# Normal counts: 227451. Fraud counts: 227451 (Magic!)
-
-# 4. Train model safely!
-rf_model_smote = RandomForestClassifier()
-rf_model_smote.fit(X_resampled, y_resampled)
-print(classification_report(y_test, rf_model_smote.predict(X_test)))
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'imblearn'
 ```
 
 ## Wrapping Up Day 6

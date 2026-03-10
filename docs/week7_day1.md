@@ -46,6 +46,10 @@ ensemble_model.fit(X_train, y_train)
 
 # 4. Predict
 y_pred_ensemble = ensemble_model.predict(X_test)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X_train' is not defined
 ```
 
 ## The Results

@@ -40,6 +40,13 @@ df["Score"] = df["Score"].interpolate()
 df = df.rename(columns={"Name":"Student_Name", "Score": "Exam:Score"})
 
 print("Cleaned Dataset: \n", df)
+# Output:
+# Cleaned Dataset: 
+#    Student_Name   Age  Exam:Score
+# 0        Alice  25.0        85.0
+# 1          Bob  30.0        90.0
+# 2          NaN  30.0        89.0
+# 3        David  35.0        88.0
 ```
 
 ## Creating New Features (Data Transformation)
@@ -48,6 +55,10 @@ Data Cleaning isn't just fixing errors; it's also preparing the data to be more 
 ```python
 # Create a new column by dividing 'Score' by 200 and multiplying by 100
 merged["Score_Percentage"] = (merged["Score"] / 200) * 100
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'merged' is not defined
 ```
 
 ## Bringing Datasets Together
@@ -73,6 +84,10 @@ merged = pd.merge(df1, df2, how="inner", on="ID")
 
 print("Merged Dataset: \n", merged)
 # Output shows a beautiful Table containing ID, Name, Age, AND Score!
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'pd' is not defined. Did you mean: 'id'?
 ```
 
 ### Types of Merges

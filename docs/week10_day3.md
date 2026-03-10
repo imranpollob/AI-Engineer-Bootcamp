@@ -37,6 +37,10 @@ class SimpleCNN(nn.Module):
         self.conv1 = nn.Conv2d(3, 32, kernel_size=3)
         # Instantly cut the image dimensions in half!
         self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 ## Max vs. Average

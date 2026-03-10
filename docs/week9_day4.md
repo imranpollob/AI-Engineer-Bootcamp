@@ -25,6 +25,10 @@ for iteration in range(1000): # 1000 Epochs!
     
     # 2. OPTIMIZE! Adjust the original Weights based on the gradients!
     theta -= learning_rate * gradients
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X_b' is not defined
 ```
 
 ### The Learning Rate

@@ -52,6 +52,10 @@ grid_search.fit(X_train, y_train)
 
 # Output: Best Parameters: {'colsample_bytree': 0.8, 'learning_rate': 0.1, 
 # 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'xgboost'
 ```
 
 ## Wrapping Up Day 4

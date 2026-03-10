@@ -28,6 +28,9 @@ print("P(Even): ", P_even)
 P_greater_than_4 = np.sum(rolls > 4) / len(rolls)
 print("P(Greater than 4): ", P_greater_than_4)
 # Output: ~0.33 (33% chance!)
+# Output:
+# P(Even):  0.498
+# P(Greater than 4):  0.3419
 ```
 
 ## Random Variables
@@ -80,6 +83,10 @@ std_dev = np.sqrt(variance)
 
 print("Variance: ", variance) # Output: ~2.91
 print("Standard Deviation: ", std_dev) # Output: ~1.70
+# Output:
+# Expectation (Mean):  3.5
+# Variance:  2.9166666666666665
+# Standard Deviation:  1.707825127659933
 ```
 This tells us that the average roll is a 3.5, and we expect most rolls to deviate from that average by roughly 1.7!
 

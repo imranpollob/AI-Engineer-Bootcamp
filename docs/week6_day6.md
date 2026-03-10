@@ -25,6 +25,10 @@ y_pred = model.predict(X_test)
 print(f"Mean Absolute Error (MAE): {mean_absolute_error(y_test, y_pred):.2f}")
 print(f"Mean Squared Error (MSE): {mean_squared_error(y_test, y_pred):.2f}")
 print(f"R2-Score(R2): {r2_score(y_test, y_pred):.2f}")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'model' is not defined
 ```
 
 ## 2. Classification Metrics (Predicting Categories)
@@ -49,6 +53,10 @@ disp.plot(cmap="Blues")
 
 # Print the complete breakdown of every True/False Positive!
 print(classification_report(y_test, y_predict))
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'model' is not defined
 ```
 
 ## Are False Positives or False Negatives Worse?

@@ -30,6 +30,10 @@ rf_model = RandomForestClassifier(random_state=42)
 rf_model.fit(X_train, y_train)
 y_pred_rf = rf_model.predict(X_test)
 print(f"Random Forest Accuracy: {accuracy_score(y_test, y_pred_rf)}")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X_train' is not defined
 ```
 
 *Depending on the complexity of the dataset, Gradient Boosting will usually beat Random Forest in raw accuracy!*

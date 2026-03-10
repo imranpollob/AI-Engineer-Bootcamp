@@ -19,6 +19,10 @@ model = Sequential([
 ])
 
 # Output: Test Accuracy: ~0.8200 (82%)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'Sequential' is not defined
 ```
 
 Why didn't accuracy reach $99\%$? Because of a fatal mathematical flaw called the **Vanishing Gradient Problem**.

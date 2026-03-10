@@ -34,6 +34,18 @@ mi_df = mi_df.sort_values(by="Mutual Information", ascending=False)
 print(mi_df)
 # Output reveals that the 'bmi' and 's5' columns contain massive information, 
 # while 'sex' and 'age' contain almost zero! We can safely delete them.
+# Output:
+# Feature  Mutual Information
+# 2     bmi            0.173552
+# 8      s5            0.147135
+# 9      s6            0.125177
+# 7      s4            0.107667
+# 6      s3            0.070420
+# 4      s1            0.064331
+# 3      bp            0.057558
+# 1     sex            0.036341
+# 5      s2            0.010386
+# 0     age            0.000000
 ```
 
 ## The Embedded Methods (Tree Feature Importance)
@@ -64,6 +76,10 @@ plt.barh(importance_df['Feature'], importance_df['Importance'])
 plt.gca().invert_yaxis()
 plt.title("Feature Importance from Random Forest")
 plt.show()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X' is not defined
 ```
 
 ## Wrapping Up Day 4

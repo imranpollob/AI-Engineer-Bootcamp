@@ -25,6 +25,10 @@ for column in df.select_dtypes(include=['object']).columns:
 scaler = StandardScaler()
 numerical_features = ['tenure', 'MonthlyCharges', 'TotalCharges']
 df[numerical_features] = scaler.fit_transform(df[numerical_features])
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'pd' is not defined. Did you mean: 'id'?
 ```
 
 ### Phase 2: The Baseline Model
@@ -35,6 +39,10 @@ Always train a "stupid" baseline model first! If our hyperparameter tuning doesn
 rf_model = RandomForestClassifier(random_state=42)
 rf_model.fit(X_train, y_train)
 print(f"Initial Model Accuracy: {accuracy_score(y_test, rf_model.predict(X_test)):.4f}")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'RandomForestClassifier' is not defined
 ```
 
 ### Phase 3: Unleash the Tuner!
@@ -62,6 +70,10 @@ random_search = RandomizedSearchCV(
 
 # Launch!
 random_search.fit(X_train, y_train)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'np' is not defined
 ```
 
 ### Phase 4: Production Evaluation
@@ -70,6 +82,10 @@ The Tournament is over! We print the final optimized parameters, and evaluate th
 best_model = random_search.best_estimator_
 y_pred_tuned = best_model.predict(X_test)
 print(f"Tuned Model Accuracy: {accuracy_score(y_test, y_pred_tuned):.4f}")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'random_search' is not defined
 ```
 
 Because of our specific architectural tuning, the Tuned Model should mathematically outscore the Baseline on unseen Data. We have successfully optimized a production model!

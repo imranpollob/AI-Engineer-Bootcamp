@@ -50,6 +50,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 print("Training Data Set Shape: ", X_train.shape)
 print("Testing Data Set Shape: ", X_test.shape)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'train_test_split' is not defined
 ```
 
 ## Wrapping Up Day 1

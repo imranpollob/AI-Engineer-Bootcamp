@@ -22,6 +22,10 @@ rf_default.fit(X_train, y_train)
 
 print(f"Default Model Accuracy: {accuracy_score(y_test, rf_default.predict(X_test)):.4f}")
 # Output Default Accuracy: ~0.9649
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'RandomForestClassifier' is not defined
 ```
 It scores $96.4\%$ accuracy. Not bad! 
 
@@ -40,6 +44,10 @@ rf_tuned.fit(X_train, y_train)
 
 print(f"Tuned Model Accuracy: {accuracy_score(y_test, rf_tuned.predict(X_test)):.4f}")
 # Output Tuned Accuracy: ~0.9737
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'RandomForestClassifier' is not defined
 ```
 By simply changing two architectural numbers, our accuracy jumped to $97.3\%$! 
 

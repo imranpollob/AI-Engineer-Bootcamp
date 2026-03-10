@@ -29,6 +29,10 @@ rf_model.fit(X_train, y_train)
 
 # When we predict, all 100 trees vote on the answer!
 y_pred = rf_model.predict(X_test)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X_train' is not defined
 ```
 
 ## Tuning the Forest (GridSearch)
@@ -59,6 +63,10 @@ grid_search = GridSearchCV(
 
 grid_search.fit(X_train, y_train)
 print(f"Best Parameters: {grid_search.best_params_}")
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'RandomForestClassifier' is not defined
 ```
 
 ## Wrapping Up Day 2

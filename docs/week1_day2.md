@@ -22,6 +22,8 @@ elif num == 0:
     print("Zero")
 else:
     print("Negative Number")
+# Output:
+# Negative Number
 ```
 *Note the indentation! Python uses indentation (spaces) to define blocks of code. If you don't indent properly, Python will throw an error.*
 
@@ -41,6 +43,15 @@ for fruit in fruits:
 # Looping a specific number of times using range()
 for i in range(5): # This will print 0, 1, 2, 3, 4
     print(i)
+# Output:
+# apple
+# banana
+# cherry
+# 0
+# 1
+# 2
+# 3
+# 4
 ```
 
 ### 2. The `while` Loop
@@ -51,6 +62,12 @@ count = 5
 while count > 0:
     print(count)
     count -= 1 # We must decrease the count, or it loops forever!
+# Output:
+# 5
+# 4
+# 3
+# 2
+# 1
 ```
 
 ## Controlling the Loops (`break` and `continue`)
@@ -65,6 +82,16 @@ for i in range(10):
     if i == 5:
         continue
     print(i)
+# Output:
+# 0
+# 1
+# 2
+# 3
+# 4
+# 6
+# 7
+# 8
+# 9
 ```
 
 ## Hands-On: A Menu-Driven Calculator

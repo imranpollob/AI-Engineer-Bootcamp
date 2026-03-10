@@ -34,6 +34,10 @@ revenue = [250, 400, 150]
 plt.bar(categories, revenue, color="green")
 plt.title("Revenue by Category")
 plt.show()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'plt' is not defined
 ```
 
 ### 3. The Scatter Plot
@@ -47,6 +51,10 @@ plt.title("Study hours vs Exam Scores")
 plt.xlabel("Hours Studied")
 plt.ylabel("Exam Scores")
 plt.show()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'plt' is not defined
 ```
 
 ## Seaborn: Advanced Visualizations
@@ -74,6 +82,10 @@ correlation_matrix = df.corr()
 sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm")
 plt.title("Correlation Heatmap")
 plt.show()
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'seaborn'
 ```
 
 ## Wrapping Up Day 6

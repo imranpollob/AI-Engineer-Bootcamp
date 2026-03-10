@@ -28,7 +28,7 @@ def sigmoid(z):
 z = np.linspace(-10, 10, 100)
 plt.plot(z, sigmoid(z))
 plt.title("Sigmoid Function")
-plt.show() 
+plt.show()
 ```
 
 Because the output is always between 0 and 1, we treat it as a **Probability**. 
@@ -59,6 +59,10 @@ model.fit(X_train, y_train)
 
 # 3. Predict the classifications (Outputs arrays of 1s and 0s)
 y_pred = model.predict(X_test)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'df' is not defined
 ```
 
 ### Classification Metrics
@@ -69,6 +73,10 @@ from sklearn.metrics import accuracy_score
 
 print("Accuracy:", accuracy_score(y_test, y_pred))
 # Output: Accuracy: 0.95! (95% of its predictions were correct)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'y_test' is not defined
 ```
 
 ## Wrapping Up Day 4

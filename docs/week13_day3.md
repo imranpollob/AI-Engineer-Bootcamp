@@ -35,6 +35,10 @@ for name, param in model.named_parameters():
         
 # 3. CRITICAL: Continue training using an incredibly tiny Learning Rate!
 # optimizer = optim.Adam(model.parameters(), lr=1e-5)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'torchvision'
 ```
 
 Look at the `Adam` optimizer. We drop the learning rate to `1e-5`. When you unfreeze pre-trained layers, you **must use a microscopic learning rate**. If you use a normal learning rate, the erratic gradients will aggressively smash through the pre-trained weights, completely destroying the knowledge it took Google months to calculate! This is called *Catastrophic Forgetting*.

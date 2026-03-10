@@ -32,6 +32,9 @@ print("Definite Integral: ", definite_integral)
 # Output: 1 
 # Note: Because the area under this curve perfectly equals 1, 
 # this function is mathematically valid as a Probability Distribution!
+# Output:
+# Indefinite integral:  -exp(-x)
+# Definite Integral:  1
 ```
 
 ## Advanced Optimization: SGD
@@ -89,6 +92,9 @@ theta_opt = stochastic_gradient_descent(X_b, y, theta, learning_rate, n_epochs=5
 # Did our AI "learn" the secret formula behind our noisy data?
 print("Optimized Parameters:", theta_opt)
 # Ideally, theta_opt should be extremely close to [4.0, 3.0]!
+# Output:
+# Optimized Parameters: [[4.16427183]
+#  [2.69207144]]
 ```
 
 ## Wrapping Up Day 4

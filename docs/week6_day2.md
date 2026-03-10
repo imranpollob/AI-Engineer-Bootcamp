@@ -51,6 +51,10 @@ std_scaler = StandardScaler()
 X_stand = std_scaler.fit_transform(X)
 # ... [Split and train model again] ...
 print("Accuracy with Standardization:", accuracy_score(y_test_std, knn_stand.predict(X_test_std)))
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X_train' is not defined
 ```
 
 Depending on the random state and the exact distribution of the data, scaling almost always boosts accuracy by 2%-10%! Furthermore, gradient-descent algorithms (like Neural Networks) will train exponentially faster if the data is scaled to zero.

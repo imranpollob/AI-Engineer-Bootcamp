@@ -28,6 +28,10 @@ std_dev = np.std(data)
 print("Mean: ", mean)
 print("Variance: ", variance)
 print("Standard Deviation: ", std_dev)
+# Output:
+# Mean:  30.0
+# Variance:  200.0
+# Standard Deviation:  14.142135623730951
 ```
 
 ## Hypothesis Testing & P-Values
@@ -63,6 +67,10 @@ if p_value < alpha:
     print("Reject the null hypothesis: There is a significant difference!")
 else:
     print("Failed to reject the null hypothesis: It might just be random luck!")
+# Output:
+# T-Statistic:  1.272792206135785
+# P-Value:  0.23883314363035274
+# Failed to reject the null hypothesis: It might just be random luck!
 ```
 
 ## Wrapping Up Day 6

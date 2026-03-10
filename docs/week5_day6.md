@@ -46,6 +46,8 @@ knn.fit(X_train, y_train)
 y_pred_knn = knn.predict(X_test)
 
 print(f"k-NN Accuracy (k={best_k}): ", accuracy_score(y_test, y_pred_knn))
+# Output:
+# k-NN Accuracy (k=5):  1.0
 ```
 
 ## Choosing $k$

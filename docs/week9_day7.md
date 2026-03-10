@@ -60,6 +60,10 @@ history = improved_model.fit(
 )
 
 # Output test Accuracy ranges from ~68% to ~75%!
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'Sequential' is not defined
 ```
 
 ## Wrapping Up Week 9!

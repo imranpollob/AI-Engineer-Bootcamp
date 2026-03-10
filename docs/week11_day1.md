@@ -43,6 +43,10 @@ model = Sequential([
     # Is the review Positive (1) or Negative (0)?
     Dense(1, activation='sigmoid')
 ])
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 ### What is `pad_sequences`?

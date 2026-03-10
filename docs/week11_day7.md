@@ -35,6 +35,10 @@ gru_model = Sequential([
 ])
 
 # ... [Compile, fit, evaluate logic using Adam] ...
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'tensorflow'
 ```
 
 ### Output Results

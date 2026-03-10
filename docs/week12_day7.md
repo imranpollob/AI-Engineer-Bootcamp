@@ -41,6 +41,10 @@ def tokenize_function(examples):
     return model_inputs
 
 # ... [Map and Tokenize data utilizing Trainer()] ...
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'datasets'
 ```
 
 ### The Generation Algorithm
@@ -57,6 +61,10 @@ outputs = model.generate(
 )
 
 print("Generated Summary: ", tokenizer.decode(outputs[0], skip_special_tokens=True))
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'model' is not defined
 ```
 Instead of blindly selecting the next word (Greedy Search), `num_beams=4` forces the algorithm to generate 4 separate *alternative* sentences concurrently, weighing the math of the entire generated sequence before confirming the final prediction!
 

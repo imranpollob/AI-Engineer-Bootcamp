@@ -29,6 +29,10 @@ preprocessor = ColumnTransformer(
 
 # Boom! The entire dataset is scaled, encoded, and transformed in one command!
 X_preprocessed = preprocessor.fit_transform(X)
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X' is not defined
 ```
 
 ## 2. Hyperparameter Tuning using GridSearch
@@ -69,6 +73,10 @@ print(f"Best Accuracy: {grid_search.best_score_:.2f}")
 
 # Output: Best hyperparameters: {'max_depth': 10, 'min_samples_split': 10, 'n_estimators': 50}
 # With an Accuracy of 83% Survival Rate prediction!
+# Output:
+# Traceback (most recent call last):
+#   ...
+# NameError: name 'X_preprocessed' is not defined
 ```
 
 ## Wrapping Up Week 6!

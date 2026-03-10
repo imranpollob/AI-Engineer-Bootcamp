@@ -19,6 +19,8 @@ def add_numbers(a, b):
 # Calling the function
 result = add_numbers(10, 5)
 print("Sum: ", result)
+# Output:
+# Sum:  15
 ```
 
 ## Scope: Local vs Global Variables
@@ -55,6 +57,8 @@ import math as m # We import the built in math module and give it an alias 'm'
 
 # We can now use functions from that module
 print(m.sqrt(16)) # Output: 4.0
+# Output:
+# 4.0
 ```
 
 ## Hands-On: Factorials and Custom Modules
@@ -79,6 +83,8 @@ def print_factorial(n):
     print(f"The factorial of {n} is {result}")
     
 print_factorial(5)
+# Output:
+# The factorial of 5 is 120
 ```
 
 ### Exercise 2: Building your own Module
@@ -98,6 +104,10 @@ print("Addition: ", mo.add(num1, num2))
 print("Subtraction: ", mo.subtract(num1, num2))
 print("Multiplication: ", mo.multiply(num1, num2))
 print("Division: ", mo.divide(num1, num2))
+# Output:
+# Traceback (most recent call last):
+#   ...
+# ModuleNotFoundError: No module named 'math_operations'
 ```
 
 ## Wrapping Up Day 3
