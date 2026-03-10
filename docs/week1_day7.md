@@ -20,9 +20,16 @@ List comprehensions are a concise way to create lists. They replace clunky `for`
 squares = []
 for i in range(10):
     squares.append(i * i)
+print(squares)
 
 # The Pythonic Way (List Comprehension)
 squares = [i * i for i in range(10)]
+print(squares)
+```
+
+```result
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
 
 ### Feature 2: Lambda Functions
@@ -32,6 +39,10 @@ Sometimes you need a tiny, single-use function, but you don't want to define a w
 # A lambda function that adds 10 to a number
 add_ten = lambda x: x + 10
 print(add_ten(5)) # Output: 15
+```
+
+```result
+15
 ```
 
 ### Feature 3: The `sys` and `os` Modules
@@ -56,9 +67,22 @@ def load_tasks():
     if os.path.exists(FILE_NAME): # Using the 'os' module!
         with open(FILE_NAME, "r") as file:
             for line in file:
-                task_id, title, status = line.strip().split(" | ")
-                tasks[int(task_id)] = {"title": title, "status": status}
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    task_id, title, status = line.split(" | ")
+                    tasks[int(task_id)] = {"title": title, "status": status}
+                except ValueError:
+                    # Skip malformed lines
+                    continue
     return tasks
+
+def save_tasks(tasks):
+    with open(FILE_NAME, "w") as file:
+        for task_id in sorted(tasks.keys()):
+            t = tasks[task_id]
+            file.write(f"{task_id} | {t['title']} | {t['status']}\n")
 
 # 2. Modifying Data (Dictionaries)
 def add_task(tasks):
@@ -68,22 +92,30 @@ def add_task(tasks):
     tasks[task_id] = {"title": title, "status": "incomplete"}
     print(f"Task '{title}' added.")
 
+def view_tasks(tasks):
+    if not tasks:
+        print("No tasks found.")
+        return
+    print("\nTasks:")
+    for tid in sorted(tasks.keys()):
+        t = tasks[tid]
+        print(f"{tid}: {t['title']} [{t['status']}]")
+
 # 3. The Main Loop (Control Flow)
 def main():
     tasks = load_tasks() # Call our function
     while True:
         print("\nTask Manager Menu:")
-        print("1. Add Task | 2. View Tasks | 5. Exit")
+        print("1. Add Task | 2. View Tasks | 3. Exit")
         choice = input("Enter your choice: ")
         
         if choice == "1":
             add_task(tasks)
         elif choice == "2":
-            # (Imagine a view_tasks function here!)
-            print("Viewing tasks...") 
-        elif choice == "5":
-            # Save to disk before exiting!
-            # save_tasks(tasks) 
+            view_tasks(tasks)
+        elif choice == "3":
+            # Save to disk before exiting
+            save_tasks(tasks)
             print("Goodbye")
             break
         else:
@@ -92,6 +124,31 @@ def main():
 # This is a Pythonic way of saying "Only run main() if this script is executed directly"
 if __name__ == "__main__":
     main()
+```
+
+```output
+Task Manager Menu:
+1. Add Task | 2. View Tasks | 3. Exit
+Enter your choice: 2
+No tasks found.
+
+Task Manager Menu:
+1. Add Task | 2. View Tasks | 3. Exit
+Enter your choice: 1
+Enter task title: Finish coding
+Task 'Finish coding' added.
+
+Task Manager Menu:
+1. Add Task | 2. View Tasks | 3. Exit
+Enter your choice: 2
+
+Tasks:
+1: Finish coding [incomplete]
+
+Task Manager Menu:
+1. Add Task | 2. View Tasks | 3. Exit
+Enter your choice: 3
+Goodbye
 ```
 
 ## Wrapping Up Week 1!

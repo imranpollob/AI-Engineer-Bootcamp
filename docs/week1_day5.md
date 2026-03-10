@@ -17,17 +17,28 @@ Strings in Python are actually arrays of characters, meaning we can do some pret
 
 sentence = "Python is fun"
 words = sentence.split() # Splits the sentence into a list: ['Python', 'is', 'fun']
+print("words:", words)
 
 # Join the list back together, separated by a pipe
 new_sentence = "|".join(words) # Output: Python|is|fun
+print("new_sentence:", new_sentence)
 
 # Replace text
 text = "I love Java"
 updated_text = text.replace("Java", "Python")
+print("updated_text:", updated_text)
 
 # Strip whitespace
 messy = "     Hello, World     "
 cleaned_text = messy.strip() # Output: "Hello, World"
+print("cleaned_text:", cleaned_text)
+```
+
+```result
+words: ['Python', 'is', 'fun']
+new_sentence: Python|is|fun
+updated_text: I love Python
+cleaned_text: Hello, World
 ```
 
 ## The Heavy Lifter: Regular Expressions (Regex)
@@ -53,6 +64,11 @@ print(digits) # Output: ['123', '456', '7890']
 # Replace all single digits with the letter 'X' (Redaction!)
 updated_text = re.sub(r"\d", "X", text)
 print(updated_text) # Output: Contact me at XXX-XXX-XXXX
+```
+
+```result
+['123', '456', '7890']
+Contact me at XXX-XXX-XXXX
 ```
 
 ## Hands-On Let's Code!
@@ -83,6 +99,10 @@ print("Cleaned Text: ", cleaned_text)
 # Output: Cleaned Text:  hello world welcome to python programming
 ```
 
+```result
+Cleaned Text:  hello world welcome to python programming
+```
+
 ### Exercise 2: The Palindrome Checker
 A palindrome is a word that is spelled the same backward and forward (like "Racecar"). We can use Python string manipulation to easily strip out spaces and check this!
 
@@ -96,9 +116,20 @@ def is_palindrome(text):
     # Python lets us reverse a string using this slice syntax: [::-1]
     return text == text[::-1]
 
+# Interactive usage (keeps original behavior)
 input_text = input("Enter a string: ")
 if is_palindrome(input_text):
     print(f'"{input_text}" is a palindrome.')
+
+# Demonstration output so students can copy results into the markdown
+demo = "Racecar"
+print(f'Demo: "{demo}" ->', is_palindrome(demo))
+```
+
+```result
+Enter a string: level
+"level" is a palindrome.
+Demo: "Racecar" -> True
 ```
 
 ## Wrapping Up Day 5

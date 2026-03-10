@@ -98,6 +98,15 @@ write_item_to_file("fruits.txt", fruits)
 read_items_from_file("fruits.txt")
 ```
 
+```result
+Items in the file:
+Apple
+Banana
+Cherry
+Dates
+```
+
+
 ## Wrapping Up Day 6
 You can now safely persist data to your hard drive and read it back! You have officially learned all the foundational mechanics of Python.
 
