@@ -28,6 +28,7 @@ data = {
     "Score": [85, 90, np.nan, 88],
 }
 df = pd.DataFrame(data)
+print(df)
 
 # 1. Fill missing 'Age' with the statistical MEAN (Average) of the Age column
 df["Age"] = df["Age"].fillna(df["Age"].mean())
@@ -40,6 +41,21 @@ df["Score"] = df["Score"].interpolate()
 df = df.rename(columns={"Name":"Student_Name", "Score": "Exam:Score"})
 
 print("Cleaned Dataset: \n", df)
+```
+
+```result
+    Name   Age  Score
+0  Alice  25.0   85.0
+1    Bob   NaN   90.0
+2    NaN  30.0    NaN
+3  David  35.0   88.0
+
+Cleaned Dataset:
+   Student_Name   Age  Exam:Score
+0        Alice  25.0        85.0
+1          Bob  30.0        90.0
+2          NaN  30.0        89.0
+3        David  35.0        88.0
 ```
 
 ## Creating New Features (Data Transformation)
@@ -57,6 +73,8 @@ Let's look at Exercise 2 (`day4_ex2.py`). We have two totally different DataFram
 
 ```python
 # day4_ex2.py
+import pandas as pd
+
 df1 = pd.DataFrame({
     "ID": [1,2,3],
     "Name": ["Alice", "Bob", "Charlie"],
@@ -73,6 +91,14 @@ merged = pd.merge(df1, df2, how="inner", on="ID")
 
 print("Merged Dataset: \n", merged)
 # Output shows a beautiful Table containing ID, Name, Age, AND Score!
+```
+
+```result
+Merged Dataset: 
+    ID     Name  Age  Score
+0   1    Alice   25     85
+1   2      Bob   30     90
+2   3  Charlie   35     88
 ```
 
 ### Types of Merges

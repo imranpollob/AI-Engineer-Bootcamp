@@ -31,6 +31,17 @@ print("Add: \n", result_add)
 print("Multiplication: \n", result_mul)
 ```
 
+```result
+Add: 
+ [[2 2 2]
+ [5 5 5]
+ [8 8 8]]
+Multiplication:
+ [[ 2  4  6]
+ [ 8 10 12]
+ [14 16 18]]
+```
+
 ## Boolean Indexing: Lightning-Fast Filtering
 Let's say you have an array of 10,000 ages and you want to find everyone older than 25. If you loop through it using standard Python, it will take milliseconds. In NumPy, it takes microseconds using a boolean mask.
 
@@ -45,22 +56,54 @@ dataset = np.random.randint(1, 51, size=(5,5))
 print("Original Dataset: \n", dataset)
 ```
 
+```result
+Original Dataset: 
+ [[36 35 42  5  4]
+ [20 24 45 35 13]
+ [ 7 27 27 21 25]
+ [21 35 41 17  1]
+ [19 16 20  1 30]]
+```
+
 Now, instead of a slow `for... if` loop, what if we wanted to replace any number greater than 25 with a 0? We generate a boolean condition (`dataset > 25`) and use it directly as an index!
 
 ```python
+import numpy as np
+
+dataset = np.random.randint(1, 51, size=(5,5))
+
 # Boolean Indexing is incredibly fast
 dataset[dataset > 25] = 0
 print("Modified Dataset: \n", dataset)
+```
+
+```result
+Modified Dataset: 
+ [[ 0  8 16  0 13]
+ [ 0  0  0  9  0]
+ [ 0  0  8 19  8]
+ [ 0  0  0  0 19]
+ [ 0  0  0 20 15]]
 ```
 
 ## Aggregation Functions
 When working with data, you frequently need to calculate summary statistics for the entire array (or specific rows and columns). NumPy excels at this.
 
 ```python
+import numpy as np
+
+dataset = np.random.randint(1, 51, size=(5,5))
+
 # calculate summary stats instantly across the entire 5x5 matrix
 print("Sum: ", np.sum(dataset))
 print("Mean: ", np.mean(dataset))
 print("Standard Deviation: ", np.std(dataset))
+```
+
+```result
+Sum:  601
+Mean:  24.04
+Standard Deviation:  12.625307917037112
 ```
 
 ## Hands-On Let's Code!
@@ -68,8 +111,17 @@ print("Standard Deviation: ", np.std(dataset))
 Try taking `day2_ex2.py` one step further. Can you modify the boolean index to only find numbers that are exactly equal to 5, or numbers that are between 10 and 20? Try chaining conditions using `&` (and) and `|` (or) operators!
 
 ```python
+import numpy as np
+
+dataset = np.random.randint(1, 51, size=(5,5))
+
 # Example: Find all values greater than 10 AND less than 20
 between_10_and_20 = dataset[(dataset > 10) & (dataset < 20)]
+print(between_10_and_20)
+```
+
+```result
+[16 13 16 12 19]
 ```
 
 ## Wrapping Up Day 2

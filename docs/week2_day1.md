@@ -23,16 +23,28 @@ print(arr[-1]) # Output: 60
 print(arr[1:4]) # Output: [20 30 40]
 ```
 
+```result
+30
+60
+[20 30 40]
+```
+
+
 ## Reshaping Data
 In AI, we constantly change the shape of our data. For instance, you might have an image consisting of 784 pixels in a flat line, but you need to reshape it into a 28x28 square matrix. That's what `.reshape()` is for:
 
 ```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50, 60])
 # Turns our 1D array of 6 items into a 2D matrix (2 rows, 3 columns)
 reshaped = arr.reshape(2, 3)
 print(reshaped)
-# Output:
-# [[10 20 30]
-#  [40 50 60]]
+```
+
+```result
+[[10 20 30]
+ [40 50 60]]
 ```
 
 ## Hands-On Let's Code!
@@ -49,11 +61,22 @@ import numpy as np
 # np.arange() operates exactly like Python's built-in range()
 a = np.arange(1, 6)   # [1, 2, 3, 4, 5]
 b = np.arange(6, 11)  # [6, 7, 8, 9, 10]
+print(a, a)
+print(b, b)
 
 print("Add: ", a + b)   # Output: [ 7  9 11 13 15]
 print("Sub: ", a - b)   # Output: [-5 -5 -5 -5 -5]
 print("Mult: ", a * b)  # Output: [ 6 14 24 36 50]
 print("Div: ", a / b)
+```
+
+```result
+[1 2 3 4 5] [1 2 3 4 5]
+[ 6  7  8  9 10] [ 6  7  8  9 10]
+Add:  [ 7  9 11 13 15]
+Sub:  [-5 -5 -5 -5 -5]
+Mult:  [ 6 14 24 36 50]
+Div:  [0.16666667 0.28571429 0.375 0.44444444 0.5]
 ```
 
 ### Exercise 2: Matrix Manipulations
@@ -76,6 +99,21 @@ another_matrix = np.array([[9,8,7], [6,5,4], [3,2,1]])
 
 print("Addition: \n", matrix + another_matrix)
 print("Multiplication : \n", matrix * another_matrix)
+```
+
+```result
+Transpose:
+ [[1 4 7]
+ [2 5 8]
+ [3 6 9]]
+Addition:
+ [[10 10 10]
+ [10 10 10]
+ [10 10 10]]
+Multiplication :
+ [[ 9 16 21]
+ [24 25 24]
+ [21 16  9]]
 ```
 
 ## Wrapping Up Day 1
