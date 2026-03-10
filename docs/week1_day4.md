@@ -19,9 +19,17 @@ print(fruits[0]) # Output: "apple"
 fruits.append("orange") # Adds an item to the end
 fruits.insert(1, "grape") # Inserts 'grape' at index 1
 fruits.remove("banana") # Removes a specific item
+print("Fruits", fruits)
 
 # Slicing a list to get a sub-list
 sliced_fruits = fruits[2:4] 
+print("Sliced", sliced_fruits)
+```
+
+```result
+apple
+Fruits ['apple', 'grape', 'cherry', 'orange']
+Sliced ['cherry', 'orange']
 ```
 
 ## 2. Tuples
@@ -40,6 +48,10 @@ print(colors[0]) # Output: red
 # colors.append("yellow") # ERROR! Tuples cannot be modified!
 ```
 
+```result
+red
+```
+
 ## 3. Dictionaries
 If Lists are arrays, Dictionaries are Key-Value mappings (similar to JSON objects). You look up data using completely custom keys instead of numerical indexes.
 
@@ -52,7 +64,13 @@ student["subject"] = "Math" # Adds a new key-value pair
 student["age"] = 32 # Updates an existing value
 
 # Removing data
-del student["grade"] 
+del student["grade"]
+
+print(student)
+```
+
+```result
+{'name': 'Alice', 'age': 32, 'subject': 'Math'}
 ```
 
 ## 4. Sets
@@ -63,7 +81,11 @@ set1 = {1, 2, 3}
 set2 = {3, 4, 5}
 
 # Set Difference: What is in set1 but NOT in set2?
-print(set1 - set2) # Output: {1, 2}
+print(set1 - set2)
+```
+
+```result
+{1, 2}
 ```
 
 ## Hands-On Let's Code!
@@ -88,7 +110,10 @@ if "grade" in person:
     del person["grade"]
     
 print(person)
-# Output: {'name': 'Alice', 'age': 32, 'address': '123 Main St'}
+```
+
+```result
+{'name': 'Alice', 'age': 32, 'address': '123 Main St'}
 ```
 
 ### Exercise 2: Word Frequency Counter (NLP Basics)
@@ -116,6 +141,12 @@ for word in words:
         
 print(word_count)
 ```
+
+```result
+Enter a Sentence: i am a coder as well as a writer
+{'i': 1, 'am': 1, 'a': 2, 'coder': 1, 'as': 2, 'well': 1, 'writer': 1}
+```
+
 
 ## Wrapping Up Day 4
 You have now unlocked the heavy machinery of Python. Lists and Dictionaries will be used in almost every single AI script you write.

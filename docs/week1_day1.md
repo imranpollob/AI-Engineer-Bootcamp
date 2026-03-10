@@ -40,6 +40,10 @@ It is a tradition to make your first program print out a greeting. In Python, th
 print("Hello, AI World!")
 ```
 
+```result
+Hello, AI World!
+```
+
 ### Exercise 2: Manipulating Variables
 Here is how you define those different data types we talked about earlier, and how you can start interacting with them.
 
@@ -71,6 +75,16 @@ print("Tuple: ", tuple_var)
 # We access data in a dictionary using its key
 print("Dictionary Value:", dict_var["role"])
 print("Boolean: ", bool_var)
+```
+
+```result
+Integer:  10
+Float:  3.14
+String:  AI Bootcamp
+List:  [1, 2, 3, 4]
+Tuple:  (4, 5, 6)
+Dictionary Value: Engineer
+Boolean:  True
 ```
 
 **Your Turn:** Try changing the values in `dict_var` to reflect your own name and role, and run the script again!

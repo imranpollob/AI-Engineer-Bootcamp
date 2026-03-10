@@ -23,6 +23,10 @@ elif num == 0:
 else:
     print("Negative Number")
 ```
+
+```result
+Negative Number
+```
 *Note the indentation! Python uses indentation (spaces) to define blocks of code. If you don't indent properly, Python will throw an error.*
 
 ## The Power of Loops (`for` and `while`)
@@ -43,6 +47,17 @@ for i in range(5): # This will print 0, 1, 2, 3, 4
     print(i)
 ```
 
+```result
+apple
+banana
+cherry
+0
+1
+2
+3
+4
+```
+
 ### 2. The `while` Loop
 A `while` loop continues to execute *as long as* a specified condition remains True. Be careful! If the condition never turns False, you'll create an "infinite loop."
 
@@ -51,6 +66,14 @@ count = 5
 while count > 0:
     print(count)
     count -= 1 # We must decrease the count, or it loops forever!
+```
+
+```result
+5
+4
+3
+2
+1
 ```
 
 ## Controlling the Loops (`break` and `continue`)
@@ -65,6 +88,18 @@ for i in range(10):
     if i == 5:
         continue
     print(i)
+```
+
+```result
+0
+1
+2
+3
+4
+6
+7
+8
+9
 ```
 
 ## Hands-On: A Menu-Driven Calculator
@@ -109,6 +144,21 @@ while True: # Infinite loop to keep the menu running
     else:
         print("Invalid choice. Please try again.")
 ```
+
+```result
+Menu:
+1. Addition | 2. Subtraction | 3. Multiplication | 4. Division | 5. Exit
+Enter your choice: 1
+Enter first number: 12
+Enter second number: 5
+Result:  17.0
+
+Menu:
+1. Addition | 2. Subtraction | 3. Multiplication | 4. Division | 5. Exit
+Enter your choice: 5
+Exiting Program.
+```
+
 
 ## Wrapping Up Day 2
 You can now write programs that *think* and automate repetitive tasks. Tomorrow is extremely important: we're going to dive deep into **Functions and Modules**. Functions allow us to package our code into reusable blocks, which is how large-scale AI applications are actually built. Stay tuned!

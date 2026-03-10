@@ -21,6 +21,10 @@ result = add_numbers(10, 5)
 print("Sum: ", result)
 ```
 
+```result
+Sum:  15
+```
+
 ## Scope: Local vs Global Variables
 
 Understanding *where* your variables live is critical. This is called "Scope".
@@ -44,6 +48,7 @@ def greet_local():
 # If we tried to print(message) outside the function, python would throw an error!
 ```
 
+
 ## Importing and Using Modules
 
 What if you write a brilliant function that you want to use in five different projects? Do you copy-paste it? No! You turn it into a **Module**.
@@ -55,6 +60,10 @@ import math as m # We import the built in math module and give it an alias 'm'
 
 # We can now use functions from that module
 print(m.sqrt(16)) # Output: 4.0
+```
+
+```result
+4.0
 ```
 
 ## Hands-On: Factorials and Custom Modules
@@ -81,6 +90,10 @@ def print_factorial(n):
 print_factorial(5)
 ```
 
+```result
+The factorial of 5 is 120
+```
+
 ### Exercise 2: Building your own Module
 Imagine we took our calculator functions from Day 2 and put them in a separate file named `math_operations.py`. We can now import that file into a new script just like we imported the built-in `math` module!
 
@@ -99,6 +112,7 @@ print("Subtraction: ", mo.subtract(num1, num2))
 print("Multiplication: ", mo.multiply(num1, num2))
 print("Division: ", mo.divide(num1, num2))
 ```
+
 
 ## Wrapping Up Day 3
 Functions and Modules are the very core of software design. By breaking your AI pipelines down into modular functions (e.g., `load_data()`, `clean_data()`, `train_model()`), your projects will be infinitely easier to manage. 
