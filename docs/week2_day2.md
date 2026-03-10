@@ -54,11 +54,11 @@ dataset = np.random.randint(1, 51, size=(5,5))
 print("Original Dataset: \n", dataset)
 # Output:
 # Original Dataset: 
-#  [[26 34 11  8 46]
-#  [ 2 40 30 44 27]
-#  [11 41  2 25  1]
-#  [34 24 34 33 49]
-#  [47  3 10 20 41]]
+#  [[34 44 32 34 12]
+#  [16 23 31 14 42]
+#  [25 37 15 49 26]
+#  [35 13 19 44 41]
+#  [31 22 38 15  5]]
 ```
 
 Now, instead of a slow `for... if` loop, what if we wanted to replace any number greater than 25 with a 0? We generate a boolean condition (`dataset > 25`) and use it directly as an index!
@@ -77,6 +77,7 @@ print("Modified Dataset: \n", dataset)
 When working with data, you frequently need to calculate summary statistics for the entire array (or specific rows and columns). NumPy excels at this.
 
 ```python
+import numpy as np
 # calculate summary stats instantly across the entire 5x5 matrix
 print("Sum: ", np.sum(dataset))
 print("Mean: ", np.mean(dataset))
@@ -84,7 +85,7 @@ print("Standard Deviation: ", np.std(dataset))
 # Output:
 # Traceback (most recent call last):
 #   ...
-# NameError: name 'np' is not defined
+# NameError: name 'dataset' is not defined
 ```
 
 ## Hands-On Let's Code!

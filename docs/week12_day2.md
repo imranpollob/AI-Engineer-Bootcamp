@@ -45,6 +45,23 @@ outputs = model(**inputs)
 
 print("Hidden States Shape:", outputs.last_hidden_state.shape)
 # Output: [1, 9, 768]
+# Output:
+# Hidden States Shape: torch.Size([1, 10, 768])
+# Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+# Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5455.19it/s]
+# [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+# Key                                        | Status     |  | 
+# -------------------------------------------+------------+--+-
+# cls.seq_relationship.weight                | UNEXPECTED |  | 
+# cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+# cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+# cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+# cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+# cls.predictions.bias                       | UNEXPECTED |  | 
+# cls.seq_relationship.bias                  | UNEXPECTED |  | 
+# 
+# [3mNotes:
+# - UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
 ```
 
 ### Deciphering the Output

@@ -52,7 +52,7 @@ print(f"LightGBM ROC-AUC: {roc_auc_lgb:.2f}")
 # Output:
 # Traceback (most recent call last):
 #   ...
-# ModuleNotFoundError: No module named 'imblearn'
+# FileNotFoundError: [Errno 2] No such file or directory: 'Telco-Customer-Churn.csv'
 ```
 
 *(Note: While algorithms will naturally trade blows natively, CatBoost / LightGBM almost always win out of the box until heavy GridSearchCV tuning is applied).*

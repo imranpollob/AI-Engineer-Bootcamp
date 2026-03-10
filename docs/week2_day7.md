@@ -46,9 +46,46 @@ df = df.drop_duplicates()
 first_class = df[df["Pclass"] == 1]
 print("First Class Passengers: \n", first_class.head())
 # Output:
-# Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'seaborn'
+# <class 'pandas.DataFrame'>
+# RangeIndex: 891 entries, 0 to 890
+# Data columns (total 12 columns):
+#  #   Column       Non-Null Count  Dtype  
+# ---  ------       --------------  -----  
+#  0   PassengerId  891 non-null    int64  
+#  1   Survived     891 non-null    int64  
+#  2   Pclass       891 non-null    int64  
+#  3   Name         891 non-null    str    
+#  4   Sex          891 non-null    str    
+#  5   Age          714 non-null    float64
+#  6   SibSp        891 non-null    int64  
+#  7   Parch        891 non-null    int64  
+#  8   Ticket       891 non-null    str    
+#  9   Fare         891 non-null    float64
+#  10  Cabin        204 non-null    str    
+#  11  Embarked     889 non-null    str    
+# dtypes: float64(2), int64(5), str(5)
+# memory usage: 118.9 KB
+# None
+#        PassengerId    Survived      Pclass  ...       SibSp       Parch        Fare
+# count   891.000000  891.000000  891.000000  ...  891.000000  891.000000  891.000000
+# mean    446.000000    0.383838    2.308642  ...    0.523008    0.381594   32.204208
+# std     257.353842    0.486592    0.836071  ...    1.102743    0.806057   49.693429
+# min       1.000000    0.000000    1.000000  ...    0.000000    0.000000    0.000000
+# 25%     223.500000    0.000000    2.000000  ...    0.000000    0.000000    7.910400
+# 50%     446.000000    0.000000    3.000000  ...    0.000000    0.000000   14.454200
+# 75%     668.500000    1.000000    3.000000  ...    1.000000    0.000000   31.000000
+# max     891.000000    1.000000    3.000000  ...    8.000000    6.000000  512.329200
+# 
+# [8 rows x 7 columns]
+# First Class Passengers: 
+#      PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+# 1             2         1       1  ...  71.2833   C85         C
+# 3             4         1       1  ...  53.1000  C123         S
+# 6             7         0       1  ...  51.8625   E46         S
+# 11           12         1       1  ...  26.5500  C103         S
+# 23           24         1       1  ...  35.5000    A6         S
+# 
+# [5 rows x 12 columns]
 ```
 
 ## Visualizing the Findings
@@ -72,6 +109,7 @@ plt.show()
 
 **Hypothesis 2:** Was the Titanic full of young people or old people?
 ```python
+import seaborn as sns
 # Let's use Seaborn to draw a beautiful Age distribution Histogram
 sns.histplot(df["Age"], kde=True, bins=20, color="purple")
 plt.title("Age Distribution")
@@ -81,7 +119,7 @@ plt.show()
 # Output:
 # Traceback (most recent call last):
 #   ...
-# NameError: name 'sns' is not defined
+# NameError: name 'df' is not defined
 ```
 
 **Hypothesis 3:** Did older people buy more expensive tickets? 
@@ -95,7 +133,7 @@ plt.show()
 # Output:
 # Traceback (most recent call last):
 #   ...
-# NameError: name 'plt' is not defined
+# NameError: name 'df' is not defined
 ```
 
 ## Wrapping Up Week 2!

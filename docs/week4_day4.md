@@ -54,7 +54,7 @@ else:
 # We cannot statistically claim they are smarter!
 # Output:
 # T-Statistic:  0.9408750722807707
-# P-Value:  0.383088241586687
+# P-Value:  0.38308824158668686
 # Fail to Reject the null hypothesis: no significant difference
 ```
 

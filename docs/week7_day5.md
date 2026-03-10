@@ -42,7 +42,7 @@ print(f"CatBoost Native Accuracy: {accuracy_score(y_test, cat_preds_native):.4f}
 # Output:
 # Traceback (most recent call last):
 #   ...
-# ModuleNotFoundError: No module named 'catboost'
+# NameError: name 'X_train' is not defined
 ```
 
 ## When to use Which?

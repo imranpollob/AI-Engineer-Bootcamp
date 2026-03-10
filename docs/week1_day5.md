@@ -104,6 +104,8 @@ def is_palindrome(text):
 input_text = input("Enter a string: ")
 if is_palindrome(input_text):
     print(f'"{input_text}" is a palindrome.')
+# Output:
+# TimeoutExpired: Code took longer than 60 seconds linearly.
 ```
 
 ## Wrapping Up Day 5

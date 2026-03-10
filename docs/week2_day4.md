@@ -67,6 +67,7 @@ Imagine you have one spreadsheet with Customer Names and Addresses, and a second
 Let's look at Exercise 2 (`day4_ex2.py`). We have two totally different DataFrames that share a single common column: an `ID`. 
 
 ```python
+import pandas as pd
 # day4_ex2.py
 df1 = pd.DataFrame({
     "ID": [1,2,3],
@@ -85,9 +86,11 @@ merged = pd.merge(df1, df2, how="inner", on="ID")
 print("Merged Dataset: \n", merged)
 # Output shows a beautiful Table containing ID, Name, Age, AND Score!
 # Output:
-# Traceback (most recent call last):
-#   ...
-# NameError: name 'pd' is not defined. Did you mean: 'id'?
+# Merged Dataset: 
+#     ID     Name  Age  Score
+# 0   1    Alice   25     85
+# 1   2      Bob   30     90
+# 2   3  Charlie   35     88
 ```
 
 ### Types of Merges

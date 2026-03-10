@@ -40,8 +40,8 @@ t_stat, p_value = ttest_rel(pre_test, post_test)
 print("Paired T-Test P-Value:", p_value)
 # Output:
 # One-Sample T-Test P-Value: 0.8275647196020324
-# Two-Sample T-Test P-Value:  0.43489229767474047
-# Paired T-Test P-Value: 0.01613008990009254
+# Two-Sample T-Test P-Value:  0.4348922976747406
+# Paired T-Test P-Value: 0.016130089900092553
 ```
 
 ## 2. Chi-Square Test (Comparing Categories)
@@ -88,7 +88,7 @@ f_stat, p_value = f_oneway(group1, group2, group3)
 # We fail to reject the null hypothesis. The groups are statistically identical!
 print("P-Value:", p_value)
 # Output:
-# P-Value: 0.6186248513251716
+# P-Value: 0.6186248513251715
 ```
 
 ## Wrapping Up Day 5

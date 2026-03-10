@@ -36,9 +36,10 @@ for name, param in model.named_parameters():
 # 3. CRITICAL: Continue training using an incredibly tiny Learning Rate!
 # optimizer = optim.Adam(model.parameters(), lr=1e-5)
 # Output:
-# Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'torchvision'
+# /home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+#   warnings.warn(
+# /home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+#   warnings.warn(msg)
 ```
 
 Look at the `Adam` optimizer. We drop the learning rate to `1e-5`. When you unfreeze pre-trained layers, you **must use a microscopic learning rate**. If you use a normal learning rate, the erratic gradients will aggressively smash through the pre-trained weights, completely destroying the knowledge it took Google months to calculate! This is called *Catastrophic Forgetting*.

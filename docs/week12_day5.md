@@ -42,6 +42,16 @@ output = gpt_model.generate(
 print("Generated Text:", tokenizer.decode(output[0], skip_special_tokens=True))
 
 # Sample Output: "Once upon a time, I was a very different kind of person. I was a very happy, outgoing, and deeply spiritual person..."
+# Output:
+# Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]
+# Loading weights: 100%|██████████| 148/148 [00:00<00:00, 3393.52it/s]
+# Traceback (most recent call last):
+#   File "<string>", line 23, in <module>
+# TypeError: ne() received an invalid combination of arguments - got (NoneType), but expected one of:
+#  * (Tensor other)
+#       didn't match because some of the arguments have invalid types: (!NoneType!)
+#  * (Number other)
+#       didn't match because some of the arguments have invalid types: (!NoneType!)
 ```
 
 ### The Power of Hugging Face

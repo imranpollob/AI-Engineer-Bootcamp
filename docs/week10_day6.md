@@ -27,9 +27,11 @@ datagen = ImageDataGenerator(
 # 2. Pre-calculate the statistical limits of our specific training set!
 datagen.fit(x_train)
 # Output:
+# 2026-03-09 23:58:09.594529: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+# To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 # Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'tensorflow'
+#   File "<string>", line 23, in <module>
+# NameError: name 'x_train' is not defined
 ```
 
 ## The Infinite Batch

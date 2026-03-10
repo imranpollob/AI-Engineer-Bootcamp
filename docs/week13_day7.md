@@ -47,9 +47,17 @@ model.compile(optimizer="adam", loss="binary_crossentropy", metrics=['accuracy']
 # 6. TRAIN! 
 history = model.fit(train_data, validation_data=val_data, epochs=10)
 # Output:
+# 2026-03-09 23:49:49.200504: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+# To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 # Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'tensorflow'
+#   File "<string>", line 27, in <module>
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/keras/src/legacy/preprocessing/image.py", line 1136, in flow_from_directory
+#     return DirectoryIterator(
+#            ^^^^^^^^^^^^^^^^^^
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/keras/src/legacy/preprocessing/image.py", line 456, in __init__
+#     for subdir in sorted(os.listdir(directory)):
+#                          ^^^^^^^^^^^^^^^^^^^^^
+# FileNotFoundError: [Errno 2] No such file or directory: 'PATH_TO_DATASET'
 ```
 
 ## The Next Step: Unfreezing Extensibility

@@ -40,6 +40,8 @@ print("Numerical Features: ", numerical_features.tolist())
 # Output:
 # Categorical Features:  ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']
 # Numerical Features:  ['PassengerId', 'Survived', 'Pclass', 'Age', 'SibSp', 'Parch', 'Fare']
+# <string>:20: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+# See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
 ```
 
 Once we have separated them, we can analyze them individually. We can look at the mathematical averages of the Numerical features:

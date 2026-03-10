@@ -135,6 +135,8 @@ while True: # Infinite loop to keep the menu running
         print("Result: ", divide(num1, num2))
     else:
         print("Invalid choice. Please try again.")
+# Output:
+# TimeoutExpired: Code took longer than 60 seconds linearly.
 ```
 
 ## Wrapping Up Day 2

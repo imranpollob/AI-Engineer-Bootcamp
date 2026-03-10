@@ -57,6 +57,28 @@ def train_model():
         # 4. CRITICAL: Trigger the Scheduler! Modify the Learning rate Dynamically!
         scheduler.step()
         optimizer.zero_grad()
+# Output:
+# Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+# Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3805.18it/s]
+# [1mBertForSequenceClassification LOAD REPORT[0m from: bert-base-uncased
+# Key                                        | Status     | 
+# -------------------------------------------+------------+-
+# cls.seq_relationship.bias                  | UNEXPECTED | 
+# cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+# cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+# cls.predictions.transform.dense.bias       | UNEXPECTED | 
+# cls.seq_relationship.weight                | UNEXPECTED | 
+# cls.predictions.bias                       | UNEXPECTED | 
+# cls.predictions.transform.dense.weight     | UNEXPECTED | 
+# classifier.bias                            | MISSING    | 
+# classifier.weight                          | MISSING    | 
+# 
+# [3mNotes:
+# - UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+# - MISSING[3m	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.[0m
+# Traceback (most recent call last):
+#   File "<string>", line 19, in <module>
+# NameError: name 'train_loader' is not defined
 ```
 
 By explicitly injecting `scheduler.step()` inside the training loop, the Learning Rate physically alters itself every single millisecond, slowly accelerating, then slowly decaying, guaranteeing perfect Fine-Tuning synchronization!

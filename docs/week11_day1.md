@@ -44,9 +44,12 @@ model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 # Output:
-# Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'tensorflow'
+# 2026-03-09 23:56:44.692658: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+# To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+# /home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/numpy/lib/_format_impl.py:838: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+#   array = pickle.load(fp, **pickle_kwargs)
+# WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+# I0000 00:00:1773115010.875610  744723 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 6086 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2080 SUPER, pci bus id: 0000:05:00.0, compute capability: 7.5
 ```
 
 ### What is `pad_sequences`?

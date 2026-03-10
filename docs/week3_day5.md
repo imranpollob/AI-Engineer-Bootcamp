@@ -67,6 +67,8 @@ plt.title("Poisson Distribution")
 plt.show() # You will see the probability peak at 3, and taper off towards 10!
 ```
 
+![Generated Plot](images/plot_90aeb58a.png)
+
 ## Wrapping Up Day 5
 Probability is the lens through which AI views the world. Next time your email provider automatically flags an email as "Spam," recognize that it just calculated Bayes' Theorem behind the scenes.
 

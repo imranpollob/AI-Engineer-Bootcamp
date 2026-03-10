@@ -69,7 +69,7 @@ else:
     print("Failed to reject the null hypothesis: It might just be random luck!")
 # Output:
 # T-Statistic:  1.272792206135785
-# P-Value:  0.23883314363035274
+# P-Value:  0.2388331436303526
 # Failed to reject the null hypothesis: It might just be random luck!
 ```
 

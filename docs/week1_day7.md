@@ -94,6 +94,8 @@ def main():
 # This is a Pythonic way of saying "Only run main() if this script is executed directly"
 if __name__ == "__main__":
     main()
+# Output:
+# TimeoutExpired: Code took longer than 60 seconds linearly.
 ```
 
 ## Wrapping Up Week 1!

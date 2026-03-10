@@ -42,9 +42,11 @@ gru_model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 # Output:
+# 2026-03-09 23:49:39.296914: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+# To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 # Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'tensorflow'
+#   File "<string>", line 15, in <module>
+# NameError: name 'Sequential' is not defined
 ```
 
 ## GRU vs LSTM

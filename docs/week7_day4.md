@@ -55,7 +55,7 @@ grid_search.fit(X_train, y_train)
 # Output:
 # Traceback (most recent call last):
 #   ...
-# ModuleNotFoundError: No module named 'xgboost'
+# NameError: name 'X_train' is not defined
 ```
 
 ## Wrapping Up Day 4

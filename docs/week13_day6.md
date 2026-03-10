@@ -43,7 +43,7 @@ model = AutoModelForSequenceClassification.from_pretrained(
 # Output:
 # Traceback (most recent call last):
 #   ...
-# ModuleNotFoundError: No module named 'datasets'
+# datasets.exceptions.DatasetNotFoundError: Dataset 'pubmed_rct' doesn't exist on the Hub or cannot be accessed.
 ```
 
 By switching 2 strings (`"bert-base-uncased"` to `"dmis-lab/biobert-base-cased-v1.1"`), we instantly boost our baseline accuracy by leaps and bounds. The model physically *knows* what a `tumor` is, whereas generalized BERT treats `tumor` as an unknown outlier.

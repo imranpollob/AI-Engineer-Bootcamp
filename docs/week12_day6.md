@@ -61,9 +61,87 @@ trainer.train()
 
 # Output Results: Test Accuracy > ~94%!
 # Output:
+# Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+# Loading weights: 100%|██████████| 197/197 [00:00<00:00, 2971.76it/s]
+# [1mRobertaForSequenceClassification LOAD REPORT[0m from: roberta-base
+# Key                             | Status     | 
+# --------------------------------+------------+-
+# lm_head.layer_norm.bias         | UNEXPECTED | 
+# lm_head.dense.weight            | UNEXPECTED | 
+# lm_head.layer_norm.weight       | UNEXPECTED | 
+# lm_head.dense.bias              | UNEXPECTED | 
+# lm_head.bias                    | UNEXPECTED | 
+# roberta.embeddings.position_ids | UNEXPECTED | 
+# classifier.out_proj.weight      | MISSING    | 
+# classifier.dense.bias           | MISSING    | 
+# classifier.dense.weight         | MISSING    | 
+# classifier.out_proj.bias        | MISSING    | 
+# 
+# [3mNotes:
+# - UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+# - MISSING[3m	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.[0m
+# 
+# Map:   0%|          | 0/120000 [00:00<?, ? examples/s]
+# Map:   1%|          | 1000/120000 [00:00<00:29, 4047.43 examples/s]
+# Map:   2%|▎         | 3000/120000 [00:00<00:12, 9276.48 examples/s]
+# Map:   4%|▍         | 5000/120000 [00:00<00:09, 12351.24 examples/s]
+# Map:   8%|▊         | 9000/120000 [00:00<00:06, 16186.80 examples/s]
+# Map:  11%|█         | 13000/120000 [00:00<00:05, 17949.18 examples/s]
+# Map:  12%|█▎        | 15000/120000 [00:00<00:05, 18206.32 examples/s]
+# Map:  16%|█▌        | 19000/120000 [00:01<00:05, 19202.87 examples/s]
+# Map:  19%|█▉        | 23000/120000 [00:01<00:04, 19672.49 examples/s]
+# Map:  21%|██        | 25000/120000 [00:01<00:04, 19369.08 examples/s]
+# Map:  24%|██▍       | 29000/120000 [00:01<00:04, 20016.29 examples/s]
+# Map:  28%|██▊       | 33000/120000 [00:02<00:05, 14832.35 examples/s]
+# Map:  29%|██▉       | 35000/120000 [00:02<00:05, 14904.77 examples/s]
+# Map:  31%|███       | 37000/120000 [00:02<00:05, 14366.54 examples/s]
+# Map:  32%|███▎      | 39000/120000 [00:02<00:05, 15025.14 examples/s]
+# Map:  35%|███▌      | 42000/120000 [00:02<00:04, 16322.80 examples/s]
+# Map:  38%|███▊      | 45000/120000 [00:02<00:04, 17269.30 examples/s]
+# Map:  40%|████      | 48000/120000 [00:02<00:04, 17932.71 examples/s]
+# Map:  42%|████▎     | 51000/120000 [00:03<00:03, 18568.94 examples/s]
+# Map:  46%|████▌     | 55000/120000 [00:03<00:03, 19319.74 examples/s]
+# Map:  48%|████▊     | 58000/120000 [00:03<00:03, 19590.26 examples/s]
+# Map:  52%|█████▏    | 62000/120000 [00:03<00:02, 19981.32 examples/s]
+# Map:  54%|█████▍    | 65000/120000 [00:03<00:03, 14920.98 examples/s]
+# Map:  56%|█████▌    | 67000/120000 [00:04<00:03, 15471.92 examples/s]
+# Map:  57%|█████▊    | 69000/120000 [00:04<00:03, 16233.06 examples/s]
+# Map:  60%|██████    | 72000/120000 [00:04<00:02, 17287.11 examples/s]
+# Map:  62%|██████▎   | 75000/120000 [00:04<00:02, 17982.50 examples/s]
+# Map:  65%|██████▌   | 78000/120000 [00:04<00:02, 18547.66 examples/s]
+# Map:  68%|██████▊   | 82000/120000 [00:04<00:01, 19368.62 examples/s]
+# Map:  71%|███████   | 85000/120000 [00:04<00:01, 19521.97 examples/s]
+# Map:  74%|███████▍  | 89000/120000 [00:05<00:01, 19864.18 examples/s]
+# Map:  78%|███████▊  | 93000/120000 [00:05<00:01, 15027.97 examples/s]
+# Map:  81%|████████  | 97000/120000 [00:05<00:01, 16471.47 examples/s]
+# Map:  84%|████████▍ | 101000/120000 [00:05<00:01, 17577.90 examples/s]
+# Map:  87%|████████▋ | 104000/120000 [00:06<00:00, 18143.63 examples/s]
+# Map:  89%|████████▉ | 107000/120000 [00:06<00:00, 18218.49 examples/s]
+# Map:  91%|█████████ | 109000/120000 [00:06<00:00, 17911.71 examples/s]
+# Map:  93%|█████████▎| 112000/120000 [00:06<00:00, 18436.51 examples/s]
+# Map:  96%|█████████▌| 115000/120000 [00:06<00:00, 18889.49 examples/s]
+# Map:  98%|█████████▊| 117000/120000 [00:06<00:00, 19038.24 examples/s]
+# Map:  99%|█████████▉| 119000/120000 [00:06<00:00, 19111.96 examples/s]
+# Map: 100%|██████████| 120000/120000 [00:07<00:00, 16224.04 examples/s]
+# 
+# Map:   0%|          | 0/7600 [00:00<?, ? examples/s]
+# Map:  26%|██▋       | 2000/7600 [00:00<00:00, 7020.53 examples/s]
+# Map:  79%|███████▉  | 6000/7600 [00:00<00:00, 13638.61 examples/s]
+# Map: 100%|██████████| 7600/7600 [00:00<00:00, 13411.90 examples/s]
 # Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'datasets'
+#   File "<string>", line 31, in <module>
+#   File "<string>", line 112, in __init__
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/transformers/training_args.py", line 1577, in __post_init__
+#     self.device
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/transformers/training_args.py", line 1857, in device
+#     return self._setup_devices
+#            ^^^^^^^^^^^^^^^^^^^
+#   File "/home/pollmix/.pyenv/versions/3.12.12/lib/python3.12/functools.py", line 998, in __get__
+#     val = self.func(instance)
+#           ^^^^^^^^^^^^^^^^^^^
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/transformers/training_args.py", line 1752, in _setup_devices
+#     raise ImportError(
+# ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=1.1.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=1.1.0'`
 ```
 
 ## Wrapping Up Day 6

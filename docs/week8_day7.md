@@ -12,6 +12,7 @@ Look at `day7_ex.py`. We have constructed the absolute optimal workflow.
 ### Phase 1: Munging and Engineering
 Raw data is completely useless to an algorithm. We must clean it.
 ```python
+import pandas as pd
 # Handle missing financial values
 df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
 df.fillna({'TotalCharges': df['TotalCharges'].median()}, inplace=True)
@@ -28,7 +29,7 @@ df[numerical_features] = scaler.fit_transform(df[numerical_features])
 # Output:
 # Traceback (most recent call last):
 #   ...
-# NameError: name 'pd' is not defined. Did you mean: 'id'?
+# NameError: name 'df' is not defined
 ```
 
 ### Phase 2: The Baseline Model
@@ -49,6 +50,7 @@ print(f"Initial Model Accuracy: {accuracy_score(y_test, rf_model.predict(X_test)
 We build our parameter grid, and launch the `RandomizedSearchCV` tournament targeting a massive 20 iterations using 5-Fold Stratified Validation!
 
 ```python
+import numpy as np
 # The Sandbox
 param_dist = {
     'n_estimators': np.arange(50, 200, 10),
@@ -73,7 +75,7 @@ random_search.fit(X_train, y_train)
 # Output:
 # Traceback (most recent call last):
 #   ...
-# NameError: name 'np' is not defined
+# NameError: name 'RandomizedSearchCV' is not defined
 ```
 
 ### Phase 4: Production Evaluation

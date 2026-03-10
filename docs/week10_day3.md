@@ -38,9 +38,115 @@ class SimpleCNN(nn.Module):
         # Instantly cut the image dimensions in half!
         self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
 # Output:
-# Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'tensorflow'
+# 2026-03-09 23:56:30.274349: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+# To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+# /home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+#   super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+# WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+# I0000 00:00:1773114995.154578  744458 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 6086 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2080 SUPER, pci bus id: 0000:05:00.0, compute capability: 7.5
+# 2026-03-09 23:56:35.451773: W external/local_xla/xla/service/gpu/llvm_gpu_backend/default/nvptx_libdevice_path.cc:41] Can't find libdevice directory ${CUDA_DIR}/nvvm/libdevice. This may result in compilation or runtime failures, if the program we try to run uses routines from libdevice.
+# Searched for CUDA in the following directories:
+#   ./cuda_sdk_lib
+#   
+# import os
+# import matplotlib
+# matplotlib.use('Agg')
+# import matplotlib.pyplot as plt
+# def _custom_show(*args, **kwargs):
+#     plt.savefig('/home/pollmix/Coding/AI-Engineer-Bootcamp/docs/images/plot_f571e376.png')
+#     print('__PLOT_SAVED__')
+# plt.show = _custom_show
+# 
+# # day3_ex.py
+# import tensorflow as tf
+# import torch.nn as nn
+# 
+# # 1. TensorFlow Implementation
+# model_tf = tf.keras.Sequential([
+#     tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
+#     # Instantly cut the image dimensions in half!
+#     tf.keras.layers.MaxPooling2D((2,2)),
+# ])
+# 
+# # 2. PyTorch Implementation
+# class SimpleCNN(nn.Module):
+#     def __init__(self):
+#         super(SimpleCNN, self).__init__()
+#         self.conv1 = nn.Conv2d(3, 32, kernel_size=3)
+#         # Instantly cut the image dimensions in half!
+#         self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2).runfiles/cuda_nvcc
+#   
+# import os
+# import matplotlib
+# matplotlib.use('Agg')
+# import matplotlib.pyplot as plt
+# def _custom_show(*args, **kwargs):
+#     plt.savefig('/home/pollmix/Coding/AI-Engineer-Bootcamp/docs/images/plot_f571e376.png')
+#     print('__PLOT_SAVED__')
+# plt.show = _custom_show
+# 
+# # day3_ex.py
+# import tensorflow as tf
+# import torch.nn as nn
+# 
+# # 1. TensorFlow Implementation
+# model_tf = tf.keras.Sequential([
+#     tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
+#     # Instantly cut the image dimensions in half!
+#     tf.keras.layers.MaxPooling2D((2,2)),
+# ])
+# 
+# # 2. PyTorch Implementation
+# class SimpleCNN(nn.Module):
+#     def __init__(self):
+#         super(SimpleCNN, self).__init__()
+#         self.conv1 = nn.Conv2d(3, 32, kernel_size=3)
+#         # Instantly cut the image dimensions in half!
+#         self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2).runfiles/cuda_nvdisasm
+#   
+# import os
+# import matplotlib
+# matplotlib.use('Agg')
+# import matplotlib.pyplot as plt
+# def _custom_show(*args, **kwargs):
+#     plt.savefig('/home/pollmix/Coding/AI-Engineer-Bootcamp/docs/images/plot_f571e376.png')
+#     print('__PLOT_SAVED__')
+# plt.show = _custom_show
+# 
+# # day3_ex.py
+# import tensorflow as tf
+# import torch.nn as nn
+# 
+# # 1. TensorFlow Implementation
+# model_tf = tf.keras.Sequential([
+#     tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
+#     # Instantly cut the image dimensions in half!
+#     tf.keras.layers.MaxPooling2D((2,2)),
+# ])
+# 
+# # 2. PyTorch Implementation
+# class SimpleCNN(nn.Module):
+#     def __init__(self):
+#         super(SimpleCNN, self).__init__()
+#         self.conv1 = nn.Conv2d(3, 32, kernel_size=3)
+#         # Instantly cut the image dimensions in half!
+#         self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2).runfiles/nvidia_nvshmem
+#   
+# import/cuda_nvcc
+#   
+# import/cuda_nvdisasm
+#   
+# import/nvidia_nvshmem
+#   
+#   /usr/local/cuda
+#   /opt/cuda
+#   /home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/tensorflow/python/platform/../../../nvidia/cuda_nvcc
+#   /home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/tensorflow/python/platform/../../../../nvidia/cuda_nvcc
+#   /home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/tensorflow/python/platform/../../cuda
+#   /home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/tensorflow/python/platform/../../../../../..
+#   /home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/tensorflow/python/platform/../../../../../../..
+#   .
+# You can choose the search directory by setting xla_gpu_cuda_data_dir in HloModule's DebugOptions.  For most apps, setting the environment variable XLA_FLAGS=--xla_gpu_cuda_data_dir=/path/to/cuda will work.
 ```
 
 ## Max vs. Average

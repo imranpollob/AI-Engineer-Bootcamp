@@ -51,7 +51,7 @@ print(pd.Series(y_resampled).value_counts())
 # Output:
 # Traceback (most recent call last):
 #   ...
-# ModuleNotFoundError: No module named 'imblearn'
+# NameError: name 'df' is not defined
 ```
 
 ## Wrapping Up Day 6

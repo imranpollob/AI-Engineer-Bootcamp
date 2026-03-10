@@ -37,9 +37,9 @@ tf_layer = tf.keras.layers.Dense(units=10, activation='relu')
 # 3. Define a layer of 5 Artificial Neurons using Meta's PyTorch
 torch_layer = nn.Linear(in_features=10, out_features=5)
 # Output:
-# Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'tensorflow'
+# MNIST Dataset: Train - (60000, 28, 28)
+# 2026-03-09 23:52:17.578696: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+# To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 ```
 
 ## Wrapping Up Day 1

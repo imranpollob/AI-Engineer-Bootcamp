@@ -44,7 +44,7 @@ def tokenize_function(examples):
 # Output:
 # Traceback (most recent call last):
 #   ...
-# ModuleNotFoundError: No module named 'datasets'
+# datasets.exceptions.DatasetNotFoundError: Dataset 'samsum' doesn't exist on the Hub or cannot be accessed.
 ```
 
 ### The Generation Algorithm

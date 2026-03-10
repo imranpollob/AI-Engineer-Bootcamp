@@ -36,16 +36,16 @@ print(mi_df)
 # while 'sex' and 'age' contain almost zero! We can safely delete them.
 # Output:
 # Feature  Mutual Information
-# 2     bmi            0.173552
-# 8      s5            0.147135
-# 9      s6            0.125177
-# 7      s4            0.107667
-# 6      s3            0.070420
-# 4      s1            0.064331
-# 3      bp            0.057558
-# 1     sex            0.036341
-# 5      s2            0.010386
-# 0     age            0.000000
+# 2     bmi            0.174437
+# 8      s5            0.150942
+# 9      s6            0.102883
+# 7      s4            0.101954
+# 4      s1            0.069789
+# 6      s3            0.062327
+# 3      bp            0.053670
+# 1     sex            0.016880
+# 5      s2            0.013044
+# 0     age            0.007253
 ```
 
 ## The Embedded Methods (Tree Feature Importance)

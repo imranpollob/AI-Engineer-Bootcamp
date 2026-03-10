@@ -105,9 +105,7 @@ print("Subtraction: ", mo.subtract(num1, num2))
 print("Multiplication: ", mo.multiply(num1, num2))
 print("Division: ", mo.divide(num1, num2))
 # Output:
-# Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'math_operations'
+# Execution failed after multiple auto-resolve retries.
 ```
 
 ## Wrapping Up Day 3

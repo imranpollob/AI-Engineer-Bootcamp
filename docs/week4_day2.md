@@ -25,10 +25,6 @@ import seaborn as sns
 # Plotting the perfect Gaussian Distribution
 x = np.linspace(-4, 4, 100)
 plt.plot(x, norm.pdf(x, loc=0, scale=1), label="Gaussian (u=0, s=1)")
-# Output:
-# Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'seaborn'
 ```
 
 ### 2. Binomial Distribution
@@ -37,6 +33,7 @@ A discrete distribution. It tracks the number of "successes" across $n$ independ
 In AI, **Logistic Regression** assumes this distribution when modeling binary classification (Spam vs. Not Spam).
 
 ```python
+import numpy as np
 n, p = 10, 0.5
 x = np.arange(0, n+1)
 # Plotting the Binomial (Notice we use a Bar chart because it is Discrete!)
@@ -44,7 +41,7 @@ plt.bar(x, binom.pmf(x, n, p), alpha=0.7, label="Binomial (n=10, p=0.5)")
 # Output:
 # Traceback (most recent call last):
 #   ...
-# NameError: name 'np' is not defined. Did you mean: 'n'?
+# NameError: name 'binom' is not defined
 ```
 
 ### 3. Poisson Distribution
@@ -53,6 +50,7 @@ Another discrete distribution. It models how many times a specific event happens
 Often used in time-series forecasting algorithms.
 
 ```python
+import numpy as np
 # Average rate (\lambda) is 3 events per interval
 lam = 3
 x = np.arange(0,10)
@@ -60,7 +58,7 @@ plt.bar(x, poisson.pmf(x, lam), alpha=0.7, label="Poisson (l = 3)")
 # Output:
 # Traceback (most recent call last):
 #   ...
-# NameError: name 'np' is not defined
+# NameError: name 'poisson' is not defined
 ```
 
 ### 4. Uniform Distribution
@@ -69,48 +67,14 @@ Continuous distribution where every single outcome in a range $[a, b]$ has an id
 **Deep Learning use case:** Neural Networks randomly initialize their weights from a uniform distribution so no single node is given unfair priority at the start!
 
 ```python
+import seaborn as sns
+import numpy as np
 x = np.random.uniform(low=0, high=10, size=1000)
 sns.histplot(x, kde=True, label="Uniform", color="red")
 plt.show()
-# Output:
-# Traceback (most recent call last):
-#   ...
-# NameError: name 'np' is not defined
 ```
 
-## Understanding Distribution Shape (Skewness & Kurtosis)
-Real data often isn't perfectly symmetric. It stretches. Let's look at `day2_ex.py`. We load the famous "Iris" flower dataset and measure the shape of its `sepal_length` numbers.
-
-*   **Skewness**: Is the "tail" of the bell curve pulled out to the right (Positive Skew, like income distributions) or to the left (Negative Skew)? If a curve is extremely skewed, it can severely hurt linear models! You might have to transform it first.
-*   **Kurtosis**: How thick are the tails? High kurtosis means your dataset is loaded with extreme *outliers*. If your AI model evaluates housing prices but the data has heavy tails, it will be very confused by the $100M mansions!
-
-```python
-# day2_ex.py
-from scipy.stats import skew, kurtosis
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Load Dataset
-url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
-df = pd.read_csv(url)
-
-# Analyze sepal_length column
-feature = df["sepal_length"]
-
-# Calculate Skewness and Kurtosis mathematically
-print("Skewness: ", skew(feature))
-print("Kurtosis: ", kurtosis(feature))
-
-# Visually verify the math!
-sns.histplot(feature, kde=True)
-plt.title("Distribution of Sepal Length")
-plt.show()
-# Output:
-# Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'seaborn'
-```
+![Generated Plot](images/plot_70301639.png)
 
 ## Wrapping Up Day 2
 You now recognize the curves governing the real world. You can visualize them visually using Seaborn, and you know which algorithms assume which curves.

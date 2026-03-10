@@ -29,8 +29,8 @@ P_greater_than_4 = np.sum(rolls > 4) / len(rolls)
 print("P(Greater than 4): ", P_greater_than_4)
 # Output: ~0.33 (33% chance!)
 # Output:
-# P(Even):  0.498
-# P(Greater than 4):  0.3419
+# P(Even):  0.5093
+# P(Greater than 4):  0.3382
 ```
 
 ## Random Variables
@@ -59,6 +59,8 @@ plt.xlabel("x")
 plt.ylabel("Probability Density")
 plt.show() # Draws a perfectly flat red line!
 ```
+
+![Generated Plot](images/plot_d89c9e7e.png)
 
 ## Expectation and Variance
 If you play a game of chance infinitely, what is your average mathematical outcome? This is called your **Expectation** (or Mean).

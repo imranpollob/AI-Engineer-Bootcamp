@@ -52,7 +52,7 @@ It must predict 1 word. Then it takes its own prediction and feeds it *back into
             # The Decoder returns a French Word, AND an updated Hidden State!
             output, hidden, cell = self.decoder(input, hidden, cell)
 # Output:
-# File "<string>", line 2
+# File "<string>", line 12
 #     hidden, cell = self.encoder(src)
 # IndentationError: unexpected indent
 ```

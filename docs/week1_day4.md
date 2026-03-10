@@ -123,6 +123,8 @@ for word in words:
         word_count[word] = 1 # Create the Key if it doesn't exist
         
 print(word_count)
+# Output:
+# TimeoutExpired: Code took longer than 60 seconds linearly.
 ```
 
 ## Wrapping Up Day 4

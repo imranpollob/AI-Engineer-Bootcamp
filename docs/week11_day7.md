@@ -36,9 +36,11 @@ gru_model = Sequential([
 
 # ... [Compile, fit, evaluate logic using Adam] ...
 # Output:
+# 2026-03-09 23:49:28.877243: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+# To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 # Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'tensorflow'
+#   File "<string>", line 17, in <module>
+# NameError: name 'vocab_size' is not defined
 ```
 
 ### Output Results

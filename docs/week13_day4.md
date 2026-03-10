@@ -49,9 +49,43 @@ trainer = Trainer(
 
 trainer.train()
 # Output:
+# Building ai-engineer-bootcamp @ file:///home/pollmix/Coding/AI-Engineer-Bootcamp
+#       Built ai-engineer-bootcamp @ file:///home/pollmix/Coding/AI-Engineer-Bootcamp
+# Uninstalled 1 package in 0.41ms
+# Installed 1 package in 0.88ms
+# 
+# Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+# Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6637.67it/s]
+# [1mBertForSequenceClassification LOAD REPORT[0m from: bert-base-uncased
+# Key                                        | Status     | 
+# -------------------------------------------+------------+-
+# cls.predictions.transform.dense.bias       | UNEXPECTED | 
+# cls.predictions.transform.dense.weight     | UNEXPECTED | 
+# cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+# cls.seq_relationship.weight                | UNEXPECTED | 
+# cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+# cls.seq_relationship.bias                  | UNEXPECTED | 
+# cls.predictions.bias                       | UNEXPECTED | 
+# classifier.weight                          | MISSING    | 
+# classifier.bias                            | MISSING    | 
+# 
+# [3mNotes:
+# - UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+# - MISSING[3m	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.[0m
 # Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'datasets'
+#   File "<string>", line 27, in <module>
+#   File "<string>", line 112, in __init__
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/transformers/training_args.py", line 1577, in __post_init__
+#     self.device
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/transformers/training_args.py", line 1857, in device
+#     return self._setup_devices
+#            ^^^^^^^^^^^^^^^^^^^
+#   File "/home/pollmix/.pyenv/versions/3.12.12/lib/python3.12/functools.py", line 998, in __get__
+#     val = self.func(instance)
+#           ^^^^^^^^^^^^^^^^^^^
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/transformers/training_args.py", line 1752, in _setup_devices
+#     raise ImportError(
+# ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=1.1.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=1.1.0'`
 ```
 
 ### The NLP Tokenizer

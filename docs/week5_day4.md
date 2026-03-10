@@ -31,6 +31,8 @@ plt.title("Sigmoid Function")
 plt.show()
 ```
 
+![Generated Plot](images/plot_198b0b22.png)
+
 Because the output is always between 0 and 1, we treat it as a **Probability**. 
 *   If the model outputs `0.85`, it is 85% confident the photo is a hotdog.
 *   By default, the **Decision Boundary** is set to `0.5`. Anything > 0.5 is classified as a `1`, anything less is a `0`.

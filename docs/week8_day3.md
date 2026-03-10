@@ -44,9 +44,31 @@ study.optimize(objective, n_trials=50)
 print("Best Hyperparameters:", study.best_params)
 print("Best Accuracy: ", study.best_value)
 # Output:
+# [I 2026-03-09 23:53:34,045] A new study created in memory with name: no-name-ecba8e3c-09e4-4eab-aa6b-8e6aab88bf7f
+# [W 2026-03-09 23:53:34,047] Trial 0 failed with parameters: {'n_estimators': 253, 'max_depth': 28, 'learning_rate': 0.17656378224305924, 'colsample_bytree': 0.6883512995918839} because of the following error: NameError("name 'X_train' is not defined").
 # Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'xgboost'
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 206, in _run_trial
+#     value_or_values = func(trial)
+#                       ^^^^^^^^^^^
+#   File "<string>", line 28, in objective
+# NameError: name 'X_train' is not defined
+# [W 2026-03-09 23:53:34,050] Trial 0 failed with value None.
+# Traceback (most recent call last):
+#   File "<string>", line 37, in <module>
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/optuna/study/study.py", line 490, in optimize
+#     _optimize(
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 68, in _optimize
+#     _optimize_sequential(
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 165, in _optimize_sequential
+#     frozen_trial_id = _run_trial(study, func, catch)
+#                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 263, in _run_trial
+#     raise func_err
+#   File "/home/pollmix/Coding/AI-Engineer-Bootcamp/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 206, in _run_trial
+#     value_or_values = func(trial)
+#                       ^^^^^^^^^^^
+#   File "<string>", line 28, in objective
+# NameError: name 'X_train' is not defined
 ```
 
 ## Explorations vs. Exploitation

@@ -48,8 +48,8 @@ print("95% Confidence Interval: ", ci)
 # Output: (48.1, 52.0)
 # We isolated the true average using only 100 data points!
 # Output:
-# Sample Mean:  49.66199982480546
-# 95% Confidence Interval:  (np.float64(47.67237973816472), np.float64(51.651619911446204))
+# Sample Mean:  49.99331658581949
+# 95% Confidence Interval:  (np.float64(48.110115979605766), np.float64(51.87651719203322))
 ```
 
 ## The T-Distribution
@@ -76,7 +76,7 @@ ci = (mean - margin_of_error, mean + margin_of_error)
 
 print("95% Confidence Interval: ", ci)
 # Output:
-# 95% Confidence Interval:  (np.float64(13.627991424548375), np.float64(18.086294289737342))
+# 95% Confidence Interval:  (np.float64(13.627991424548366), np.float64(18.08629428973735))
 ```
 
 ## Wrapping Up Day 3

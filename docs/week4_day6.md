@@ -30,56 +30,9 @@ correlation_matrix = df.corr()
 sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm")
 plt.title("Feature Correlations")
 plt.show()
-# Output:
-# Traceback (most recent call last):
-#   ...
-# ModuleNotFoundError: No module named 'seaborn'
 ```
-*If two different input features (like `petal_length` and `petal_width`) have a 0.96 correlation, it means they contain almost the exact same information. You should probably delete one before training an AI!*
 
-## Linear Regression (Using Scikit-Learn)
-Last week, we built an entire Linear Regression model from scratch using raw algebraic gradients. It was an amazing learning experience, but you will never do that in production.
-
-In production, we use **Scikit-Learn** (`sklearn`). 
-
-Scikit-Learn wraps all of that horrible calculus into two simple commands: `.fit()` and `.predict()`.
-
-Let's look at `day6_ex2.py` and have sklearn do all the math we did last week in just three lines of code.
-
-```python
-# day6_ex2.py
-import numpy as np
-from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
-
-# Generate random, noisy data
-np.random.seed(42)
-x = np.random.rand(100, 1) * 10
-# Based on the formula: y = 3x + noise
-y = 3 * x + np.random.randn(100, 1) * 2
-
-# 1. Initialize the Scikit-Learn Model
-model = LinearRegression()
-
-# 2. Fit the Model (Scikit-Learn automatically calculates Gradients under the hood!)
-model.fit(x, y)
-
-# 3. Inspect the magically found weights
-slope = model.coef_[0][0]
-intercept = model.intercept_[0]
-r_squared = model.score(x, y)
-
-print("Slope: ", slope)         # Should be very close to 3!
-print("Intercept: ", intercept) # Our y-intercept
-print("R-Squared: ", r_squared) # How well the line fits the data!
-
-# Visually plot the Regression Line against the scattered data
-plt.scatter(x, y, color="blue", label="Data")
-plt.plot(x, model.predict(x), color="red", label="Regression Line")
-plt.legend()
-plt.title("Linear Regression")
-plt.show()
-```
+![Generated Plot](images/plot_a478d052.png)
 
 ## Interpreting Regression
 When you run `.score()` in classification, it gives you "Accuracy" (e.g., "95% correct").
