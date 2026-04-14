@@ -31,14 +31,11 @@ B = np.array([[9, 8], [7, 6]])
 
 # Adds 1+9, 2+8, etc...
 print("Addition\n", A + B)
+print("Scalar Mult: \n", 3 * A)
 # Output:
 # Addition
 #  [[10 10]
 #  [10 10]]
-
-# Multiplies every number in A by 3
-print("Scalar Mult: \n", 3 * A)
-# Output:
 # Scalar Mult: 
 #  [[ 3  6]
 #  [ 9 12]]
@@ -67,7 +64,8 @@ v = np.array([1, 0, -1])
 # Calculate the algebraic dot product!
 result = np.dot(M, v)
 print("Matrix-Vector Multiplication: \n", result)
-# Output: [-2 -2 -2]
+# Output:
+# [-2 -2 -2]
 ```
 *(Notice how multiplying a 3x3 Matrix by a 3-element vector results in a new 3-element vector? This dimensionality shift is exactly how AI layers change the shape of data!)*
 
@@ -85,18 +83,18 @@ import numpy as np
 # Creates a 3x3 Identity Matrix (1s on the diagonal, 0s everywhere else)
 I = np.eye(3)
 print("Identity Matrix:\n", I)
-# Output:
-# Identity Matrix:
-#  [[1. 0. 0.]
-#  [0. 1. 0.]
-#  [0. 0. 1.]]
 
 # Any matrix A multiplied by I remains exactly A.
 # A = np.dot(A, I)
 
 D = np.diag([1, 7, 9]) # Creates a diagonal matrix
 print("Diagonal Matrix:\n", D)
+
 # Output:
+# Identity Matrix:
+#  [[1. 0. 0.]
+#  [0. 1. 0.]
+#  [0. 0. 1.]]
 # Diagonal Matrix:
 #  [[1 0 0]
 #  [0 7 0]

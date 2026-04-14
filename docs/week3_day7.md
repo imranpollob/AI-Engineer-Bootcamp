@@ -75,10 +75,15 @@ mse = mean_squared_error(y, y_pred)
 r2 = r_squared(y, y_pred)
 
 print("Optimized Parameters (Theta): \n", theta_optimized)
-# Output should be very close to our formula: 4 (Y-Intercept) and 3 (Slope)!
-
 print("MSE: ", mse)
-print("R2: ", r2) 
+print("R2: ", r2)
+# Output:
+# Optimized Parameters (Theta):
+#  [[4.21509609]
+#   [2.77011344]]
+# MSE:  0.8065845639670548
+# R2:  0.7692735413614219
+# Output should be very close to our formula: 4 (Y-Intercept) and 3 (Slope)!
 # An R2 close to 1.0 means our model perfectly predicts the data!
 ```
 

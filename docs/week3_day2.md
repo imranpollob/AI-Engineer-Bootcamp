@@ -25,6 +25,12 @@ inverse = np.linalg.inv(A)
 
 print("Determinant: ", determinant)
 print("Inverse: \n", inverse)
+# Output:
+# Determinant:  -7.61295788314396e-16
+# Inverse:
+#  [[-5.40431955e+15  9.00719925e+15 -3.60287970e+15]
+#   [ 1.08086391e+16 -1.80143985e+16  7.20575940e+15]
+#   [-5.40431955e+15  9.00719925e+15 -3.60287970e+15]]
 ```
 
 ## Eigenvalues and Eigenvectors
@@ -46,6 +52,11 @@ eigvals, eigvec = np.linalg.eig(A)
 
 print("EigenValues: ",eigvals)
 print("EigenVectors: \n",eigvec)
+# Output:
+# EigenValues:  [3. 2.]
+# EigenVectors:
+#  [[0.89442719 0.70710678]
+#   [0.4472136  0.70710678]]
 ```
 
 ## Singular Value Decomposition (SVD)
@@ -75,6 +86,21 @@ np.fill_diagonal(Sigma, S)
 # The '@' symbol in Python is shorthand for np.dot() matrix multiplication!
 reconstructed = U @ Sigma @ Vt
 print("Reconstructed Matrix \n", reconstructed)
+# Output:
+# U:
+#  [[-0.57735027  0.57735027 -0.57735027]
+#   [-0.4412247  -0.81558342 -0.37435872]
+#   [-0.68701342  0.03860509  0.7256185 ]]
+# Singular Values:
+#  [4.48261292 3.17102979 1.68841687]
+# V Transpose:
+#  [[-0.4412247  -0.57735027 -0.68701342]
+#   [ 0.81558342 -0.57735027 -0.03860509]
+#   [-0.37435872 -0.57735027  0.7256185 ]]
+# Reconstructed Matrix
+#  [[ 3.  1.  1.]
+#   [-1.  3.  1.]
+#   [ 1.  1.  3.]]
 ```
 
 ## Wrapping Up Day 2

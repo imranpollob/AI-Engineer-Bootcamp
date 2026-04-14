@@ -46,8 +46,18 @@ print("Original Dataset \n", df)
 
 # 1. Group by "Class" and calculate the mathematical Mean of all remaining columns
 grouped = df.groupby("Class").mean()
-# print(grouped)
+print(grouped)
+
 # Output:
+#   Class  Score  Age
+# 0     A     85   15
+# 1     B     90   16
+# 2     A     88   15
+# 3     B     72   17
+# 4     C     95   16
+# 5     C     80   15
+
+# Grouped by Class (Mean):
 #        Score   Age
 # Class             
 # A       86.5  15.0
@@ -68,6 +78,13 @@ stats = df.groupby("Class").agg({
 })
 
 print(stats)
+# Output:
+#       Score           Age        
+#        mean max min  mean max min
+# Class                            
+# A      86.5  88  85  15.0  15  15
+# B      81.0  90  72  16.5  17  16
+# C      87.5  95  80  15.5  16  15
 ```
 
 ## Pivot Tables & Custom Aggregations
@@ -87,7 +104,13 @@ Want to run a mathematical function that isn't built into Pandas? Just write a s
 def range_func(x):
     return x.max() - x.min()
 
-df.groupby("category_column")["numeric_column"].agg(range_func)
+df.groupby("Class")[["Score", "Age"]].agg(range_func)
+# Output:
+#        Score  Age
+# Class            
+# A          3    0
+# B         18    1
+# C         15    1
 ```
 
 ## Wrapping Up Day 5

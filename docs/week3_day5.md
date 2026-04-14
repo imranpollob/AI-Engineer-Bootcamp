@@ -34,7 +34,7 @@ specificity = 0.90
 
 posterior = bayes_theorem(prior, sensitivity, specificity)
 print("Probability of Disease Given Positive Test: ", posterior)
-# Output: ~0.087 (Only an 8.7% chance you actually have it!)
+# Output: 0.087558 (Only an 8.7% chance you actually have it!)
 ```
 *Why so low? Because the disease is so rare, and the 10% false-positive rate on the 99% healthy population creates massive noise! AI models use these exact calculations to avoid making disastrous mistakes.*
 
@@ -60,9 +60,25 @@ lam = 3 # Average rate of 3 events per interval
 x = np.arange(0, 10)
 y = poisson.pmf(x, lam)
 
+print("Poisson Distribution (Lambda=3):")
+for xi, yi in zip(x, y):
+    print(f"P(X={xi}) = {yi:.6f}")
+
 plt.bar(x, y, label="Poisson")
 plt.title("Poisson Distribution")
 plt.show() # You will see the probability peak at 3, and taper off towards 10!
+# Output:
+# Poisson Distribution (Lambda=3):
+# P(X=0) = 0.049787
+# P(X=1) = 0.149361
+# P(X=2) = 0.224042
+# P(X=3) = 0.224042
+# P(X=4) = 0.168031
+# P(X=5) = 0.100819
+# P(X=6) = 0.050409
+# P(X=7) = 0.021604
+# P(X=8) = 0.008102
+# P(X=9) = 0.002701
 ```
 
 ## Wrapping Up Day 5
