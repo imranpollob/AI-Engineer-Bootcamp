@@ -2,9 +2,9 @@
 
 ![AI Engineer Bootcamp](logo.png)
 
-Welcome to the AI Engineer Bootcamp! This repository contains a comprehensive, day-by-day blog series guiding you from Python fundamentals to state-of-the-art Deep Learning and Transformer architectures.
+Welcome to the AI Engineer Bootcamp! This repository contains a comprehensive, day-by-day blog series guiding you from Python fundamentals to building production-ready AI applications with Large Language Models, RAG systems, and autonomous agents.
 
-Below is the complete index of all the micro-tutorials generated for the curriculum so far.
+Below is the complete index of all the micro-tutorials in the curriculum.
 
 ---
 
@@ -134,4 +134,44 @@ Below is the complete index of all the micro-tutorials generated for the curricu
 *   [Day 5: Fine-Tuning Techniques in NLP](week13_day5.md)
 *   [Day 6: Domain Adaptation and NLP Challenges](week13_day6.md)
 *   [Day 7: Transfer Learning Capstone Project](week13_day7.md)
+
+---
+
+## Part 4: Modern AI Engineering
+
+### Week 14: Model Deployment & MLOps
+*   [Day 1: Serving Models with FastAPI](week14_day1.md)
+*   [Day 2: Containerizing with Docker](week14_day2.md)
+*   [Day 3: Cloud Deployment](week14_day3.md)
+*   [Day 4: MLOps Basics — Experiment Tracking with MLflow](week14_day4.md)
+*   [Day 5: Monitoring in Production](week14_day5.md)
+*   [Day 6: CI/CD for ML Pipelines](week14_day6.md)
+*   [Day 7: Capstone — End-to-End ML Pipeline](week14_day7.md)
+
+### Week 15: Large Language Models & Prompt Engineering
+*   [Day 1: What Are Large Language Models?](week15_day1.md)
+*   [Day 2: Using LLM APIs](week15_day2.md)
+*   [Day 3: Prompt Engineering Fundamentals](week15_day3.md)
+*   [Day 4: Tokens, Context Windows, and Costs](week15_day4.md)
+*   [Day 5: System Prompts and Personas](week15_day5.md)
+*   [Day 6: Advanced Prompting — Templates and ReAct](week15_day6.md)
+*   [Day 7: Capstone — Multi-Turn CLI Chatbot with Memory](week15_day7.md)
+
+### Week 16: RAG Systems & Vector Databases
+*   [Day 1: Why RAG? The Problem with LLMs and Knowledge](week16_day1.md)
+*   [Day 2: Text Embeddings](week16_day2.md)
+*   [Day 3: Vector Databases — ChromaDB and FAISS](week16_day3.md)
+*   [Day 4: Building a Basic RAG Pipeline](week16_day4.md)
+*   [Day 5: Chunking Strategies](week16_day5.md)
+*   [Day 6: Evaluating RAG Quality](week16_day6.md)
+*   [Day 7: Capstone — Chat with a PDF](week16_day7.md)
+
+### Week 17: AI Agents & Production Applications
+*   [Day 1: What Are AI Agents?](week17_day1.md)
+*   [Day 2: Tool Use with LLM APIs](week17_day2.md)
+*   [Day 3: Building a Real Agent — Web Search and Summarization](week17_day3.md)
+*   [Day 4: Multi-Agent Patterns](week17_day4.md)
+*   [Day 5: LangChain and LlamaIndex — Frameworks vs. Raw API](week17_day5.md)
+*   [Day 6: Production Concerns — Reliability, Cost, and Safety](week17_day6.md)
+*   [Day 7: Final Capstone — The AI Research Assistant](week17_day7.md)
 
